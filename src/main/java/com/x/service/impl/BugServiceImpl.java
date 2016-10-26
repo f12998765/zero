@@ -30,22 +30,22 @@ public class BugServiceImpl implements BugService {
 
     @Override
     public boolean addBug(Bug bug) {
-        int num = this.bugMapper.insert(bug);
-        if(num == 1) return true;
+
+        if(this.bugMapper.insert(bug) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean delBug(int id) {
-        int num = this.bugMapper.deleteByPrimaryKey(id);
-        if(num == 1) return true;
+    public boolean delBug(int userid,int id) {
+
+        if(this.bugMapper.deleteByUserIdAndBugId(userid,id) == 1) return true;
         return false;
     }
 
     @Override
     public boolean updataBug(Bug bug) {
-        int num = this.bugMapper.updateByPrimaryKeySelective(bug);
-        if(num == 1) return true;
+
+        if(this.bugMapper.updateByUserIdAndBugId(bug) == 1) return true;
         return false;
     }
 

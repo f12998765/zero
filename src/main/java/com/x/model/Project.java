@@ -55,6 +55,11 @@ public class Project {
         this.info = info;
     }
 
+    public Project(Integer id, String info) {
+        this.id = id;
+        this.info = info;
+    }
+
     public Project() {
 
     }

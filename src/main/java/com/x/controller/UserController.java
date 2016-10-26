@@ -2,6 +2,7 @@ package com.x.controller;
 
 import com.x.model.Project;
 import com.x.model.User;
+import com.x.service.LinkService;
 import com.x.service.UserService;
 import com.x.util.TokenUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,7 @@ public class UserController {
 
     @Resource
     private UserService userService;
+
 
     @ResponseBody
     @RequestMapping("/signin")
@@ -84,8 +86,5 @@ public class UserController {
     public List<User> getAll(){
         return this.userService.getAllUser();
     }
-
-
-
 
 }

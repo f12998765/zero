@@ -80,6 +80,12 @@
     delete from bug
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
+  <delete id="deleteByUserIdAndBugId" parameterType="java.lang.Integer" >
+    delete from bug
+    where id = #{id,jdbcType=INTEGER} AND user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+
   <insert id="insert" parameterType="com.x.model.Bug" >
     insert into bug (id, user_id, task_id, 
       info, begin)
@@ -141,6 +147,17 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <update id="updateByUserIdAndBugId" parameterType="com.x.model.Bug" >
+    update bug
+    <set >
+      <if test="info != null" >
+        info = #{info,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER} AND user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
   <update id="updateByPrimaryKey" parameterType="com.x.model.Bug" >
     update bug
     set user_id = #{userId,jdbcType=INTEGER},

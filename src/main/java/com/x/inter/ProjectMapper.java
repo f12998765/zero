@@ -10,6 +10,8 @@ import java.util.List;
 public interface ProjectMapper {
     int deleteByPrimaryKey(Integer id);
 
+    int deleteByUserIdAndProId(@Param("id")Integer id,@Param("userId")Integer userid);
+
     int insert(Project record);
 
     int insertSelective(Project record);
@@ -17,6 +19,8 @@ public interface ProjectMapper {
     Project selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(Project record);
+
+    int updateByUserIdAndProId(Project project);
 
     int updateByPrimaryKey(Project record);
 
@@ -30,7 +34,7 @@ public interface ProjectMapper {
     int getCount();
 
 
-    List<Project> selectByUserId(int userid);
+    List<Project> selectByUserId(Integer userid);
 
     List<Project> selectAllById(List<Integer> ids);
 }

@@ -15,7 +15,7 @@ public interface ProjectService {
 
     public boolean addProject(Project project);
 
-    public boolean delProject(int id);
+    public boolean delProject(int userid,int id);
 
     public boolean updataProject(Project project);
 

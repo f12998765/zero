@@ -2,6 +2,7 @@ package com.x.controller;
 
 import com.x.model.Bug;
 import com.x.service.BugService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,12 @@ import java.util.List;
 public class BugController {
     @Resource
     private BugService bugService;
+
+    @ModelAttribute("userid")
+    public String getUser(@Value(value = "#{request.getAttribute('test')}") String userid)
+    {
+        return userid;
+    }
 
     @ResponseBody
     @RequestMapping("/get")
@@ -72,14 +79,15 @@ public class BugController {
 
     @ResponseBody
     @RequestMapping("/del")
-    public boolean del(@RequestParam("id") int id){
-        return bugService.delBug(id);
+    public boolean del(@ModelAttribute("userid") String userid,@RequestParam("id") int id){
+        return bugService.delBug(Integer.parseInt(userid),id);
     }
 
     @ResponseBody
-    @RequestMapping("/set")
-    public boolean updata(@RequestParam("id") int id,@RequestParam("user_id") int user_id,@RequestParam("xid") int xid,@RequestParam("info") String info){
-        Bug t = new Bug(id,user_id,xid,info);
+    @RequestMapping("/put")
+    public boolean updata(@ModelAttribute("userid") String userid,@RequestParam("id") int id,@RequestParam("info") String info){
+
+        Bug t = new Bug(id,Integer.valueOf(userid),info);
         return bugService.updataBug(t);
     }
 

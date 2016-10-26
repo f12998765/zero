@@ -2,6 +2,7 @@ package com.x.controller;
 
 import com.x.model.Task;
 import com.x.service.TaskService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,12 @@ import java.util.List;
 public class TaskController {
     @Resource
     private TaskService taskService;
+
+    @ModelAttribute("userid")
+    public String getUser(@Value(value = "#{request.getAttribute('test')}") String userid)
+    {
+        return userid;
+    }
 
     @ResponseBody
     @RequestMapping("/get")
@@ -72,14 +79,14 @@ public class TaskController {
 
     @ResponseBody
     @RequestMapping("/del")
-    public boolean del(@RequestParam("id") int id){
-        return taskService.delTask(id);
+    public boolean del(@ModelAttribute("userid") String userid,@RequestParam("id") int id){
+        return taskService.delTask(Integer.parseInt(userid),id);
     }
 
     @ResponseBody
-    @RequestMapping("/set")
-    public boolean updata(@RequestParam("user_id") int user_id,@RequestParam("id") int id,@RequestParam("xid") int xid,@RequestParam("info") String info){
-        Task t = new Task(id,user_id,xid,info);
+    @RequestMapping("/put")
+    public boolean updata(@ModelAttribute("userid") String userid,@RequestParam("id") int id,@RequestParam("info") String info){
+        Task t = new Task(id,Integer.valueOf(userid),info);
         return taskService.updataTask(t);
     }
 

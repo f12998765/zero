@@ -4,6 +4,7 @@ import com.x.model.Task;
 import com.x.model.User;
 import com.x.service.BugService;
 import com.x.service.LinkService;
+import com.x.service.ProjectService;
 import com.x.service.TaskService;
 import com.x.util.Page;
 import org.apache.log4j.Logger;
@@ -29,10 +30,11 @@ public class TestMyBatis {
     //  private ApplicationContext ac = null;
 
     //private TaskService taskService =null;
-    //private ProjectService projectService = null;
-    //private BugService bugService =null;
     @Resource
-    private LinkService linkService=null;
+    private ProjectService projectService = null;
+    //private BugService bugService =null;
+
+    //private LinkService linkService=null;
 //  @Before
 //  public void before() {
 //      ac = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -50,8 +52,12 @@ public class TestMyBatis {
         for(User u : users){
             System.out.println(u.getUsername());
         }*/
-       if(linkService.delLinkPro(1,1))
-           System.out.println("ok");
+/*       if(linkService.delLinkPro(1,1))
+           System.out.println("ok");*/
+    if(projectService.delProject(2,1))
+        System.out.println("ok");
+    else
+        System.out.println("no");
 
     }
 }

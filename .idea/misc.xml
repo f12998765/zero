@@ -39,18 +39,12 @@
             <id>Performance issuesJava</id>
           </State>
           <State>
-            <id>Spring</id>
-          </State>
-          <State>
-            <id>Spring AOPSpring</id>
-          </State>
-          <State>
             <id>Threading issuesJava</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>AOP</id>
+            <id>Batch Applications Issues</id>
           </State>
         </selected-state>
       </profile-state>

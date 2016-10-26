@@ -10,6 +10,8 @@ import java.util.List;
 public interface TaskMapper {
     int deleteByPrimaryKey(Integer id);
 
+    int deleteByUserIdAndTaskId(@Param("id")Integer id,@Param("userId")Integer userid);
+
     int insert(Task record);
 
     int insertSelective(Task record);
@@ -17,6 +19,8 @@ public interface TaskMapper {
     Task selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(Task record);
+
+    int updateByUserIdAndTaskId(Task record);
 
     int updateByPrimaryKey(Task record);
 

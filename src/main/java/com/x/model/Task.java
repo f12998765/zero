@@ -70,4 +70,16 @@ public class Task {
         this.info = info;
         this.begin = begin;
     }
+
+    public Task(Integer id, Integer userId, String info) {
+        this.id = id;
+        this.userId = userId;
+        this.info = info;
+    }
+
+    public Task(Integer id, String info) {
+
+        this.id = id;
+        this.info = info;
+    }
 }

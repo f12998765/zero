@@ -69,4 +69,15 @@ public class Bug {
         this.info = info;
         this.begin = begin;
     }
+
+    public Bug(Integer id, Integer userId, String info) {
+        this.id = id;
+        this.userId = userId;
+        this.info = info;
+    }
+
+    public Bug(Integer id, String info) {
+        this.id = id;
+        this.info = info;
+    }
 }

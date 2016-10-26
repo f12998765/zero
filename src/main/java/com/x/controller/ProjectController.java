@@ -1,6 +1,7 @@
 package com.x.controller;
 
 import com.x.model.Project;
+import com.x.model.User;
 import com.x.service.ProjectService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ import java.util.*;
 public class ProjectController {
 
     @ModelAttribute("userid")
-    public String getUser(@Value(value = "#{request.getAttribute('test')}") String userid)
+    public String getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
     {
         return userid;
     }
@@ -74,14 +75,14 @@ public class ProjectController {
 
     @ResponseBody
     @RequestMapping("/del")
-    public boolean del(@RequestParam("id") int id){
-        return projectService.delProject(id);
+    public boolean del(@ModelAttribute("userid") String userid,@RequestParam("id") int id){
+        return projectService.delProject(Integer.parseInt(userid),id);
     }
 
     @ResponseBody
-    @RequestMapping("/set")
-    public boolean updata(@RequestParam("user_id") int user_id,@RequestParam("id") int id,@RequestParam("info") String info){
-        Project p = new Project(id,user_id,info);
+    @RequestMapping("/put")
+    public boolean updata(@ModelAttribute("userid") String userid,@RequestParam("id") int id,@RequestParam("info") String info){
+        Project p = new Project(id, Integer.valueOf(userid),info);
         return projectService.updataProject(p);
     }
 
@@ -90,5 +91,6 @@ public class ProjectController {
     public List<Project> getProByUserId(@RequestParam("id") int id){
         return projectService.getProByUserId(id);
     }
+
 
 }

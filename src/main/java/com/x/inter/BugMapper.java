@@ -10,6 +10,8 @@ import java.util.List;
 public interface BugMapper {
     int deleteByPrimaryKey(Integer id);
 
+    int deleteByUserIdAndBugId(@Param("id")Integer id,@Param("userId")Integer userid);
+
     int insert(Bug record);
 
     int insertSelective(Bug record);
@@ -17,6 +19,8 @@ public interface BugMapper {
     Bug selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(Bug record);
+
+    int updateByUserIdAndBugId(Bug record);
 
     int updateByPrimaryKey(Bug record);
 

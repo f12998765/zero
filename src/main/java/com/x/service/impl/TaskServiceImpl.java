@@ -30,22 +30,22 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public boolean addTask(Task task) {
-        int num = this.taskMapper.insert(task);
-        if(num == 1) return true;
+
+        if(this.taskMapper.insert(task) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean delTask(int id) {
-        int num = this.taskMapper.deleteByPrimaryKey(id);
-        if(num == 1) return true;
+    public boolean delTask(int userid,int id) {
+
+        if(this.taskMapper.deleteByUserIdAndTaskId(userid,id) == 1) return true;
         return false;
     }
 
     @Override
     public boolean updataTask(Task task) {
-        int num = this.taskMapper.updateByPrimaryKeySelective(task);
-        if(num == 1) return true;
+
+        if(this.taskMapper.updateByUserIdAndTaskId(task) == 1) return true;
         return false;
     }
 

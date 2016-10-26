@@ -14,7 +14,7 @@ public interface TaskService {
 
     public boolean addTask(Task task);
 
-    public boolean delTask(int id);
+    public boolean delTask(int userid,int id);
 
     public boolean updataTask(Task task);
 

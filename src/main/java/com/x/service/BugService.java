@@ -16,7 +16,7 @@ public interface BugService {
 
     public boolean addBug(Bug bug);
 
-    public boolean delBug(int id);
+    public boolean delBug(int userid,int id);
 
     public boolean updataBug(Bug bug);
 

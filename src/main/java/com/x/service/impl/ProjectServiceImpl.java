@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by Administrator on 2016/10/20.
@@ -31,16 +32,16 @@ public class ProjectServiceImpl implements ProjectService{
 
     @Override
     public boolean addProject(Project project) {
-        int num = this.projectMapper.insert(project);
-        if(num==1)  return true;
+
+        if(this.projectMapper.insert(project)==1)  return true;
 
         return false;
     }
 
     @Override
-    public boolean delProject(int id) {
-        int num = this.projectMapper.deleteByPrimaryKey(id);
-        if(num == 1) return true;
+    public boolean delProject(int userid,int id) {
+        if(this.projectMapper.deleteByUserIdAndProId(userid,id) == 1)
+            return true;
 
         return false;
     }
@@ -48,9 +49,8 @@ public class ProjectServiceImpl implements ProjectService{
 
     @Override
     public boolean updataProject(Project project) {
-        int num = this.projectMapper.updateByPrimaryKeySelective(project);
-        if(num == 1) return true;
-
+        if( this.projectMapper.updateByUserIdAndProId(project) ==1)
+            return true;
         return false;
     }
 
