@@ -5,10 +5,8 @@ import com.x.model.Project;
 import com.x.model.Task;
 import com.x.model.User;
 import com.x.service.LinkService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -22,11 +20,17 @@ import java.util.Map;
 @RequestMapping("/link")
 public class LinkController {
 
+    @ModelAttribute("userid")
+    public String getUser(@Value(value = "#{request.getAttribute('test')}") String userid)
+    {
+        return userid;
+    }
+
     @Resource
     private LinkService linkService;
 
     @ResponseBody
-    @RequestMapping("/user/pro")
+    @RequestMapping("/userbypro")
     public Map getUserByProId(@RequestParam("id") int id){
         Map<String,List<User>> map = new HashMap();
 
@@ -39,7 +43,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/user/task")
+    @RequestMapping("/userbytask")
     public Map getUserByTaskId(@RequestParam("id") int id){
         Map<String,List<User>> map = new HashMap();
 
@@ -52,7 +56,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/user/bug")
+    @RequestMapping("/userbybug")
     public Map getUserByBugId(@RequestParam("id") int id){
         Map<String,List<User>> map = new HashMap();
 
@@ -65,7 +69,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/pro/user")
+    @RequestMapping("/probyuser")
     public Map getProByUserId(@RequestParam("id") int id){
         Map<String,List<Project>> map = new HashMap();
 
@@ -78,7 +82,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/task/user")
+    @RequestMapping("/taskbyuser")
     public Map getTaskByUserId(@RequestParam("id") int id){
         Map<String,List<Task>> map = new HashMap();
 
@@ -91,7 +95,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/bug/user")
+    @RequestMapping("/bugbyuser")
     public Map getBugByUserId(@RequestParam("id") int id){
         Map<String,List<Bug>> map = new HashMap();
 
@@ -102,5 +106,7 @@ public class LinkController {
         return map;
 
     }
+
+
 
 }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06244dc1-37e2-4868-aaeb-90129b78eb1c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/BugController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/BugController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/ProjectController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/ProjectController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/TaskController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/TaskController.class" />
@@ -20,8 +19,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Project.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Project.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Task.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Task.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/service/LinkService.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/service/LinkService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/zeroDemo/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/log4j.properties" />
@@ -54,11 +52,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LinkService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LinkService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/LinkService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinkController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BugController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="26" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -111,9 +131,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/service/LinkService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" />
       </list>
     </option>
   </component>
@@ -871,7 +891,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加权限，只有创建者才能删除修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加权限，只有创建者才能删除修改" />
+    <MESSAGE value="添加 LinkController 映射参与关系，补充添加删除关系方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加 LinkController 映射参与关系，补充添加删除关系方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1090,14 +1111,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -1114,16 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="97" column="54" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/UserProMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-178">
@@ -1137,6 +1140,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/LinkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1145,11 +1156,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/LinkService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="26" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
