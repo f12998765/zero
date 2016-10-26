@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.x.inter.UserProMapper" >
+  <resultMap id="BaseResultMap" type="com.x.model.UserPro" >
+    <result column="pro_id" property="proId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+  </resultMap>
+
+  <select id="selectUserIdByProId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    select user_id from user_pro where pro_id=#{proId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectProIdByUserId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    select pro_id from user_pro where user_id=#{userId,jdbcType=INTEGER}
+  </select>
+
+  <insert id="insert" parameterType="com.x.model.UserPro" >
+    insert into user_pro (pro_id, user_id)
+    values (#{proId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+
+  <delete id="delete" parameterType="com.x.model.UserPro">
+    DELETE FROM user_pro
+    WHERE user_id = #{userId,jdbcType=INTEGER} AND pro_id = #{proId,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insertSelective" parameterType="com.x.model.UserPro" >
+    insert into user_pro
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="proId != null" >
+        pro_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="proId != null" >
+        #{proId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

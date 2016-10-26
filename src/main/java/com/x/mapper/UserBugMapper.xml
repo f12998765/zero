@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.x.inter.UserBugMapper" >
+  <resultMap id="BaseResultMap" type="com.x.model.UserBug" >
+    <result column="bug_id" property="bugId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+  </resultMap>
+
+  <select id="selectUserIdByBugId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    select user_id from user_bug where bug_id=#{bugId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectBugIdByUserId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    select bug_id from user_bug where user_id=#{userId,jdbcType=INTEGER}
+  </select>
+
+  <delete id="delete" parameterType="com.x.model.UserBug">
+    DELETE FROM user_bug
+    WHERE user_id = #{userId,jdbcType=INTEGER} AND bug_id = #{bugId,jdbcType=INTEGER}
+  </delete>
+
+
+  <insert id="insert" parameterType="com.x.model.UserBug" >
+    insert into user_bug (bug_id, user_id)
+    values (#{bugId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.x.model.UserBug" >
+    insert into user_bug
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="bugId != null" >
+        bug_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="bugId != null" >
+        #{bugId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>
