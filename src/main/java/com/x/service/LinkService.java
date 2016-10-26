@@ -1,9 +1,6 @@
 package com.x.service;
 
-import com.x.model.Bug;
-import com.x.model.Project;
-import com.x.model.Task;
-import com.x.model.User;
+import com.x.model.*;
 
 import java.util.List;
 
@@ -24,10 +21,16 @@ public interface LinkService {
 
     public List<Bug> getBugByJoinUser(int id);
 
-    public boolean delLinkPro(int userid,int proid);
+    public boolean delLinkPro(UserPro userPro);
 
-    public boolean delLinkTask(int userid,int taskid);
+    public boolean delLinkTask(UserTask userTask);
 
-    public boolean delLinkBug(int userid,int bugid);
+    public boolean delLinkBug(UserBug userBug);
+
+    public boolean addLinkPro(UserPro userPro);
+
+    public boolean addLinkTask(UserTask userTask);
+
+    public boolean addLinkBug(UserBug userBug);
 
 }

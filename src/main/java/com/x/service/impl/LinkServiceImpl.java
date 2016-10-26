@@ -75,23 +75,43 @@ public class LinkServiceImpl implements LinkService {
     }
 
     @Override
-    public boolean delLinkPro(int userid, int proid) {
-        int num = this.userProMapper.delete(new UserPro(userid,proid));
-        if(num == 1) return true;
+    public boolean delLinkPro(UserPro userPro) {
+
+        if(this.userProMapper.delete(userPro) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean delLinkTask(int userid, int taskid) {
-        int num = this.userTaskMapper.delete(new UserTask(userid,taskid));
-        if(num == 1) return true;
+    public boolean delLinkTask(UserTask userTask) {
+
+        if(this.userTaskMapper.delete(userTask) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean delLinkBug(int userid, int bugid) {
-        int num = this.userBugMapper.delete(new UserBug(userid,bugid));
-        if(num == 1) return true;
+    public boolean delLinkBug(UserBug userBug) {
+
+        if(this.userBugMapper.delete(userBug) == 1) return true;
         return false;
     }
+
+    @Override
+    public boolean addLinkPro(UserPro userPro) {
+        if(this.userProMapper.insert(userPro) == 1) return true;
+        return false;
+    }
+
+    @Override
+    public boolean addLinkTask(UserTask userTask) {
+        if(this.userTaskMapper.insert(userTask) == 1) return true;
+        return false;
+    }
+
+    @Override
+    public boolean addLinkBug(UserBug userBug) {
+        if(this.userBugMapper.insert(userBug) == 1) return true;
+        return false;
+    }
+
+
 }
