@@ -31,28 +31,15 @@ public class ProjectController {
     @ResponseBody
     @RequestMapping("/get")
     public Project getById( @RequestParam("id") int id){
-        Project p = projectService.getProjectById(id);
-        return p;
+        return projectService.getProjectById(id);
     }
 
     @ResponseBody
     @RequestMapping("/getall")
-    public Map getAll(){
-
-        Map m = new HashMap();
-        m.put("data",projectService.getAllProject());
-        return m;
+    public List<Project> getAll(){
+        return projectService.getAllProject();
     }
 
-    @ResponseBody
-    @RequestMapping("/test")
-    public Map getall(@ModelAttribute("userid") String userid){
-        System.out.println(userid);
-        Map m = new HashMap();
-        //m.put("data",projectService.getAllProject());
-        m.put("data",userid);
-        return m;
-    }
     @ResponseBody
     @RequestMapping("/getall/page")
     public List<Project> getAllPage(@RequestParam("num") int pageNow,@RequestParam(name = "size",defaultValue = "5") int pageSize){

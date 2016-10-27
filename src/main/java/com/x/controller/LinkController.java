@@ -28,146 +28,98 @@ public class LinkController {
 
     @ResponseBody
     @RequestMapping("/userbypro")
-    public Map getUserByProId(@RequestParam("id") int id){
-        Map<String,List<User>> map = new HashMap();
+    public List<User> getUserByProId(@RequestParam("id") int id){
 
-        List<User> list = linkService.getUserByJoinPro(id);
-
-        map.put("data",list);
-
-        return map;
+        return linkService.getUserByJoinPro(id);
 
     }
 
     @ResponseBody
     @RequestMapping("/userbytask")
-    public Map getUserByTaskId(@RequestParam("id") int id){
-        Map<String,List<User>> map = new HashMap();
+    public List<User> getUserByTaskId(@RequestParam("id") int id){
 
-        List<User> list = linkService.getUserByJoinTask(id);
-
-        map.put("data",list);
-
-        return map;
+        return linkService.getUserByJoinTask(id);
 
     }
 
     @ResponseBody
     @RequestMapping("/userbybug")
-    public Map getUserByBugId(@RequestParam("id") int id){
-        Map<String,List<User>> map = new HashMap();
+    public List<User> getUserByBugId(@RequestParam("id") int id){
 
-        List<User> list = linkService.getUserByJoinBug(id);
-
-        map.put("data",list);
-
-        return map;
+        return linkService.getUserByJoinBug(id);
 
     }
 
     @ResponseBody
     @RequestMapping("/probyuser")
-    public Map getProByUserId(@RequestParam("id") int id){
-        Map<String,List<Project>> map = new HashMap();
+    public List<Project> getProByUserId(@RequestParam("id") int id){
 
-        List<Project> list = linkService.getProByJoinUser(id);
-
-        map.put("data",list);
-
-        return map;
+        return linkService.getProByJoinUser(id);
 
     }
 
     @ResponseBody
     @RequestMapping("/taskbyuser")
-    public Map getTaskByUserId(@RequestParam("id") int id){
-        Map<String,List<Task>> map = new HashMap();
+    public List<Task> getTaskByUserId(@RequestParam("id") int id){
 
-        List<Task> list = linkService.getTaskByJoinUser(id);
-
-        map.put("data",list);
-
-        return map;
+        return linkService.getTaskByJoinUser(id);
 
     }
 
     @ResponseBody
     @RequestMapping("/bugbyuser")
-    public Map getBugByUserId(@RequestParam("id") int id){
-        Map<String,List<Bug>> map = new HashMap();
+    public List<Bug> getBugByUserId(@RequestParam("id") int id){
 
-        List<Bug> list = linkService.getBugByJoinUser(id);
-
-        map.put("data",list);
-
-        return map;
+      return linkService.getBugByJoinUser(id);
 
     }
 
 
     @ResponseBody
     @RequestMapping("/add/pro")
-    public Map addLinkPro(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
-        Map<String,Boolean> map = new HashMap();
+    public boolean addLinkPro(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
 
-        map.put("data",linkService.addLinkPro(new UserPro(id,uid), Integer.parseInt(userid)));
-
-        return map;
+        return linkService.addLinkPro(new UserPro(id,uid), Integer.parseInt(userid));
 
     }
 
     @ResponseBody
     @RequestMapping("/add/task")
-    public Map addLinkTask(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
-        Map<String,Boolean> map = new HashMap();
+    public boolean addLinkTask(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
 
-        map.put("data",linkService.addLinkTask(new UserTask(id,uid), Integer.parseInt(userid)));
-
-        return map;
+        return linkService.addLinkTask(new UserTask(id,uid), Integer.parseInt(userid));
 
     }
 
     @ResponseBody
     @RequestMapping("/add/bug")
-    public Map addLinkBug(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
-        Map<String,Boolean> map = new HashMap();
+    public boolean addLinkBug(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
 
-        map.put("data",linkService.addLinkBug(new UserBug(id,uid), Integer.parseInt(userid)));
-
-        return map;
+        return linkService.addLinkBug(new UserBug(id,uid), Integer.parseInt(userid));
 
     }
 
     @ResponseBody
     @RequestMapping("/del/pro")
-    public Map delLinkPro(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
-        Map<String,Boolean> map = new HashMap();
+    public boolean delLinkPro(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
 
-        map.put("data",linkService.delLinkPro(new UserPro(id,uid), Integer.parseInt(userid)));
-
-        return map;
+        return linkService.delLinkPro(new UserPro(id,uid), Integer.parseInt(userid));
 
     }
 
     @ResponseBody
     @RequestMapping("/del/task")
-    public Map delLinkTask(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
-        Map<String,Boolean> map = new HashMap();
+    public boolean delLinkTask(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
 
-        map.put("data",linkService.delLinkTask(new UserTask(id,uid),Integer.parseInt(userid)));
-
-        return map;
+        return linkService.delLinkTask(new UserTask(id,uid),Integer.parseInt(userid));
 
     }
 
     @ResponseBody
     @RequestMapping("/del/bug")
-    public Map delLinkBug(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
-        Map<String,Boolean> map = new HashMap();
+    public boolean delLinkBug(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
 
-        map.put("data",linkService.delLinkBug(new UserBug(id,uid),Integer.parseInt(userid)));
-
-        return map;
+        return linkService.delLinkBug(new UserBug(id,uid),Integer.parseInt(userid));
 
     }
 }
