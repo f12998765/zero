@@ -27,7 +27,7 @@
     select
     <include refid="Base_Column_List" />
     from task
-    where userid = #{userId,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
   </select>
 <!--查询所有-->
   <select id="selectAll" resultMap="BaseResultMap">
