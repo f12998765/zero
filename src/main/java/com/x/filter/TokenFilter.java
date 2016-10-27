@@ -28,7 +28,7 @@ public class TokenFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse)servletResponse;
 
 
-        System.out.println(request.getRequestURL()+"\t"+request.getMethod());
+        System.out.println("URL:\t"+request.getRequestURL()+"\t"+request.getMethod());
 
         if(request.getRequestURI().endsWith("/signin")&&request.getMethod().equals("POST")){
             //登陆接口不校验token，直接放行
