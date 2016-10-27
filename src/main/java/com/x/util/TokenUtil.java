@@ -22,14 +22,14 @@ public class TokenUtil {
 
 
 
-    public static String CreatToken(String userid, String subject, long oktime) {
+    public static String CreatToken(int userid, String subject, long oktime) {
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256 ;
         long nowMillis = System. currentTimeMillis();
 
         Instant now = Instant.now();
 
         JwtBuilder builder = Jwts. builder()
-                .setIssuer(userid)
+                .setIssuer(String.valueOf(userid))
                 .setIssuedAt(Date.from(now))
                 .setSubject(subject)
                 .signWith(signatureAlgorithm, secret);

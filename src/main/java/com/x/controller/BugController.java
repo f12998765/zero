@@ -72,8 +72,8 @@ public class BugController {
 
     @ResponseBody
     @RequestMapping("/add")
-    public boolean add(@RequestParam("user_id") int user_id,@RequestParam("info") String info,@RequestParam("xid") int xid){
-        Bug b = new Bug(user_id,xid,info, Date.from(Instant.now()));
+    public boolean add(@ModelAttribute("userid") String userid,@RequestParam("info") String info,@RequestParam("xid") int xid){
+        Bug b = new Bug(Integer.valueOf(userid),xid,info, Date.from(Instant.now()));
         return bugService.addBug(b);
     }
 

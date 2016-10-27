@@ -45,7 +45,7 @@ public class UserController {
 
         if(password.equals(u.getPassword())){
             try {
-                String token = TokenUtil.CreatToken(userid,"zeroOne",10800);
+                String token = TokenUtil.CreatToken(u.getId(),"zeroOne",10800);
                 map.put("data",token);
             } catch (Exception e) {
                 map.put("error","登录失败");
@@ -73,7 +73,12 @@ public class UserController {
         User user = new User(userid,password,username);
 
         if(userService.addUser(user)){
-            String token = TokenUtil.CreatToken(userid,"zeroOne",10800);
+            User newUser = userService.getUserByNameId(userid);
+            if(newUser==null){
+                map.put("error","注册失败");
+                return map;
+            }
+            String token = TokenUtil.CreatToken(newUser.getId(),"zeroOne",10800);
             map.put("data",token);
         }else{
             map.put("error","注册失败");

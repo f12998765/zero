@@ -67,9 +67,9 @@ public class ProjectController {
 
     @ResponseBody
     @RequestMapping("/add")
-    public boolean add(@RequestParam("user_id") int user_id,@RequestParam("info") String info){
+    public boolean add(@ModelAttribute("userid") String userid,@RequestParam("info") String info){
 
-        Project p = new Project(user_id,info, Date.from(Instant.now()));
+        Project p = new Project(Integer.valueOf(userid),info, Date.from(Instant.now()));
         return projectService.addProject(p);
     }
 
