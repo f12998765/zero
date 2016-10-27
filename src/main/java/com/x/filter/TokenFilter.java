@@ -28,7 +28,7 @@ public class TokenFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse)servletResponse;
 
 
-        //System.out.println(request.getRequestURL()+"\t"+request.getMethod());
+        System.out.println(request.getRequestURL()+"\t"+request.getMethod());
 
         if(request.getRequestURI().endsWith("/signin")&&request.getMethod().equals("POST")){
             //登陆接口不校验token，直接放行
@@ -56,6 +56,7 @@ public class TokenFilter implements Filter {
             Claims claims = TokenUtil.ParseToken(token);
             //将用户的id放到响应头中
             request.setAttribute("userid",claims.getIssuer());
+
         } catch (ExpiredJwtException e) {
             request.getRequestDispatcher("/error?info=登录超时，请重新登录").forward(request, response);
             return;
