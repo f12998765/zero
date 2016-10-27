@@ -115,6 +115,17 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <update id="updateByUserIdAndProId" parameterType="com.x.model.Project" >
+    update project
+    <set >
+      <if test="info != null" >
+        info = #{info,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER} AND user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
   <update id="updateByPrimaryKey" parameterType="com.x.model.Project" >
     update project
     set user_id = #{userId,jdbcType=INTEGER},

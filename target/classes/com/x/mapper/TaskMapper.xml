@@ -78,6 +78,12 @@
     delete from task
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
+  <delete id="deleteByUserIdAndTaskId" parameterType="java.lang.Integer" >
+    delete from task
+    where id = #{id,jdbcType=INTEGER} AND user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+
   <insert id="insert" parameterType="com.x.model.Task" >
     insert into task (id, user_id, pro_id, 
       info, begin)
@@ -139,6 +145,17 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <update id="updateByUserIdAndTaskId" parameterType="com.x.model.Task" >
+    update task
+    <set >
+      <if test="info != null" >
+        info = #{info,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER} AND user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
   <update id="updateByPrimaryKey" parameterType="com.x.model.Task" >
     update task
     set user_id = #{userId,jdbcType=INTEGER},
