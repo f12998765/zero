@@ -21,7 +21,7 @@ public class BugController {
     private BugService bugService;
 
     @ModelAttribute("userid")
-    public String getUser(@Value(value = "#{request.getAttribute('test')}") String userid)
+    public String getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
     {
         return userid;
     }

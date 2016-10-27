@@ -33,7 +33,7 @@ public class ProjectServiceImpl implements ProjectService{
     @Override
     public boolean addProject(Project project) {
 
-        if(this.projectMapper.insert(project)==1)  return true;
+        if(this.projectMapper.insertSelective(project)==1)  return true;
 
         return false;
     }

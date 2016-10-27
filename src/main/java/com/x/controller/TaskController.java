@@ -21,7 +21,7 @@ public class TaskController {
     private TaskService taskService;
 
     @ModelAttribute("userid")
-    public String getUser(@Value(value = "#{request.getAttribute('test')}") String userid)
+    public String getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
     {
         return userid;
     }

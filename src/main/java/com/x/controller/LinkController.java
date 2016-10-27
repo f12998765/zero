@@ -18,7 +18,7 @@ import java.util.Map;
 public class LinkController {
 
     @ModelAttribute("userid")
-    public String getUser(@Value(value = "#{request.getAttribute('test')}") String userid)
+    public String getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
     {
         return userid;
     }
