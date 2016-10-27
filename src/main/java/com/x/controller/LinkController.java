@@ -1,9 +1,6 @@
 package com.x.controller;
 
-import com.x.model.Bug;
-import com.x.model.Project;
-import com.x.model.Task;
-import com.x.model.User;
+import com.x.model.*;
 import com.x.service.LinkService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -108,5 +105,69 @@ public class LinkController {
     }
 
 
+    @ResponseBody
+    @RequestMapping("/add/pro")
+    public Map addLinkPro(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+        Map<String,Boolean> map = new HashMap();
 
+        map.put("data",linkService.addLinkPro(new UserPro(id,Integer.valueOf(userid))));
+
+        return map;
+
+    }
+
+    @ResponseBody
+    @RequestMapping("/add/task")
+    public Map addLinkTask(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+        Map<String,Boolean> map = new HashMap();
+
+        map.put("data",linkService.addLinkTask(new UserTask(id,Integer.valueOf(userid))));
+
+        return map;
+
+    }
+
+    @ResponseBody
+    @RequestMapping("/add/bug")
+    public Map addLinkBug(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+        Map<String,Boolean> map = new HashMap();
+
+        map.put("data",linkService.addLinkBug(new UserBug(id,Integer.valueOf(userid))));
+
+        return map;
+
+    }
+
+    @ResponseBody
+    @RequestMapping("/del/pro")
+    public Map delLinkPro(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+        Map<String,Boolean> map = new HashMap();
+
+        map.put("data",linkService.delLinkPro(new UserPro(id,Integer.valueOf(userid))));
+
+        return map;
+
+    }
+
+    @ResponseBody
+    @RequestMapping("/del/task")
+    public Map delLinkTask(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+        Map<String,Boolean> map = new HashMap();
+
+        map.put("data",linkService.delLinkTask(new UserTask(id,Integer.valueOf(userid))));
+
+        return map;
+
+    }
+
+    @ResponseBody
+    @RequestMapping("/del/bug")
+    public Map delLinkBug(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+        Map<String,Boolean> map = new HashMap();
+
+        map.put("data",linkService.delLinkBug(new UserBug(id,Integer.valueOf(userid))));
+
+        return map;
+
+    }
 }

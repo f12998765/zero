@@ -2,6 +2,8 @@ package com.x.service.impl;
 
 import com.x.inter.TaskMapper;
 import com.x.model.Task;
+import com.x.model.User;
+import com.x.service.LinkService;
 import com.x.service.TaskService;
 import com.x.util.Page;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,8 @@ public class TaskServiceImpl implements TaskService {
 
     @Resource
     private TaskMapper taskMapper;
+    @Resource
+    private LinkService linkService;
 
     public Task getTaskById(int id) {
         return this.taskMapper.selectByPrimaryKey(id);
@@ -30,8 +34,15 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public boolean addTask(Task task) {
-
-        if(this.taskMapper.insert(task) == 1) return true;
+        List<User> users = this.linkService.getAllUserForTask(task.getProId());
+        boolean boo = false;
+        for(User u : users){
+            if(task.getUserId() == u.getId()){
+                boo = true;
+                break;
+            }
+        }
+        if(boo&&this.taskMapper.insert(task) == 1) return true;
         return false;
     }
 

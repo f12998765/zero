@@ -113,5 +113,20 @@ public class LinkServiceImpl implements LinkService {
         return false;
     }
 
+    @Override
+    public List<User> getAllUserForBug(int id) {
+        Task t = this.taskMapper.selectByPrimaryKey(id);
+        return getAllUserForTask(t.getProId());
+    }
+
+    @Override
+    public List<User> getAllUserForTask(int id) {
+        List<User> users = getUserByJoinPro(id);
+        Project p = this.projectMapper.selectByPrimaryKey(id);
+        User u = this.userMapper.selectByPrimaryKey(p.getUserId());
+        users.add(u);
+        return users;
+    }
+
 
 }

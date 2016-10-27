@@ -33,4 +33,8 @@ public interface LinkService {
 
     public boolean addLinkBug(UserBug userBug);
 
+    public List<User> getAllUserForTask(int id);
+
+    public List<User> getAllUserForBug(int id);
+
 }

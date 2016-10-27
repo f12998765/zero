@@ -2,7 +2,9 @@ package com.x.service.impl;
 
 import com.x.inter.BugMapper;
 import com.x.model.Bug;
+import com.x.model.User;
 import com.x.service.BugService;
+import com.x.service.LinkService;
 import com.x.util.Page;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,8 @@ public class BugServiceImpl implements BugService {
 
     @Resource
     private BugMapper bugMapper;
-
+    @Resource
+    private LinkService linkService;
 
     public Bug getBugById(int id) {
         return this.bugMapper.selectByPrimaryKey(id);
@@ -31,7 +34,16 @@ public class BugServiceImpl implements BugService {
     @Override
     public boolean addBug(Bug bug) {
 
-        if(this.bugMapper.insert(bug) == 1) return true;
+        List<User> users = this.linkService.getAllUserForBug(bug.getTaskId());
+        boolean boo = false;
+        for(User u : users){
+            if(bug.getUserId() == u.getId()){
+                boo = true;
+                break;
+            }
+        }
+
+        if(boo&&this.bugMapper.insert(bug) == 1) return true;
         return false;
     }
 
