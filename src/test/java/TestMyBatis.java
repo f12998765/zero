@@ -30,11 +30,11 @@ public class TestMyBatis {
     //  private ApplicationContext ac = null;
 
     //private TaskService taskService =null;
-    @Resource
-    private ProjectService projectService = null;
+    //@Resource
+    //private ProjectService projectService = null;
     //private BugService bugService =null;
-
-    //private LinkService linkService=null;
+    @Resource
+    private LinkService linkService=null;
 //  @Before
 //  public void before() {
 //      ac = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -54,10 +54,7 @@ public class TestMyBatis {
         }*/
 /*       if(linkService.delLinkPro(1,1))
            System.out.println("ok");*/
-    if(projectService.delProject(2,1))
-        System.out.println("ok");
-    else
-        System.out.println("no");
+
 
     }
 }
