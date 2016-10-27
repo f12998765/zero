@@ -21,17 +21,17 @@ public interface LinkService {
 
     public List<Bug> getBugByJoinUser(int id);
 
-    public boolean delLinkPro(UserPro userPro);
+    public boolean delLinkPro(UserPro userPro,int userid);
 
-    public boolean delLinkTask(UserTask userTask);
+    public boolean delLinkTask(UserTask userTask,int userid);
 
-    public boolean delLinkBug(UserBug userBug);
+    public boolean delLinkBug(UserBug userBug,int userid);
 
-    public boolean addLinkPro(UserPro userPro);
+    public boolean addLinkPro(UserPro userPro,int userid);
 
-    public boolean addLinkTask(UserTask userTask);
+    public boolean addLinkTask(UserTask userTask,int userid);
 
-    public boolean addLinkBug(UserBug userBug);
+    public boolean addLinkBug(UserBug userBug,int userid);
 
     public List<User> getAllUserForTask(int id);
 

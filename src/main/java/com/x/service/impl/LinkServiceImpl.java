@@ -75,53 +75,77 @@ public class LinkServiceImpl implements LinkService {
     }
 
     @Override
-    public boolean delLinkPro(UserPro userPro) {
-
-        if(this.userProMapper.delete(userPro) == 1) return true;
+    public boolean delLinkPro(UserPro userPro,int userid) {
+        Project project = this.projectMapper.selectByPrimaryKey(userPro.getProId());
+        if(project.getUserId()==userid&&this.userProMapper.delete(userPro) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean delLinkTask(UserTask userTask) {
-
-        if(this.userTaskMapper.delete(userTask) == 1) return true;
+    public boolean delLinkTask(UserTask userTask,int userid) {
+        Task task = this.taskMapper.selectByPrimaryKey(userTask.getTaskId());
+        if(task.getUserId()==userid&&this.userTaskMapper.delete(userTask) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean delLinkBug(UserBug userBug) {
-
-        if(this.userBugMapper.delete(userBug) == 1) return true;
+    public boolean delLinkBug(UserBug userBug,int userid) {
+        Bug bug = this.bugMapper.selectByPrimaryKey(userBug.getBugId());
+        if(bug.getUserId()==userid&&this.userBugMapper.delete(userBug) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean addLinkPro(UserPro userPro) {
-        if(this.userProMapper.insert(userPro) == 1) return true;
+    public boolean addLinkPro(UserPro userPro,int userid) {
+        Project project = this.projectMapper.selectByPrimaryKey(userPro.getProId());
+        if(project.getUserId() == userid&&this.userProMapper.insert(userPro) == 1)
+            return true;
         return false;
     }
 
     @Override
-    public boolean addLinkTask(UserTask userTask) {
-        if(this.userTaskMapper.insert(userTask) == 1) return true;
+    public boolean addLinkTask(UserTask userTask,int userid) {
+        boolean boo = false;
+        Task task = this.taskMapper.selectByPrimaryKey(userTask.getTaskId());
+        if(task.getUserId() == userid){
+            List<User> users = this.getAllUserForTask(userTask.getTaskId());
+            for(User u : users){
+                if(u.getId().equals(userTask.getUserId())){
+                    boo = true;
+                    break;
+                }
+            }
+        }
+        if(boo&&this.userTaskMapper.insert(userTask) == 1) return true;
         return false;
     }
 
     @Override
-    public boolean addLinkBug(UserBug userBug) {
-        if(this.userBugMapper.insert(userBug) == 1) return true;
+    public boolean addLinkBug(UserBug userBug,int userid) {
+        boolean boo = false;
+        Bug bug = this.bugMapper.selectByPrimaryKey(userBug.getBugId());
+        if(bug.getUserId() == userid){
+            List<User> users = this.getAllUserForBug(userBug.getBugId());
+            for(User u : users){
+                if(u.getId().equals(userBug.getUserId())){
+                    boo = true;
+                    break;
+                }
+            }
+        }
+        if(boo&&this.userBugMapper.insert(userBug) == 1) return true;
         return false;
     }
 
     @Override
     public List<User> getAllUserForBug(int id) {
         Task t = this.taskMapper.selectByPrimaryKey(id);
-        return getAllUserForTask(t.getProId());
+        return this.getAllUserForTask(t.getProId());
     }
 
     @Override
     public List<User> getAllUserForTask(int id) {
-        List<User> users = getUserByJoinPro(id);
+        List<User> users = this.getUserByJoinPro(id);
         Project p = this.projectMapper.selectByPrimaryKey(id);
         User u = this.userMapper.selectByPrimaryKey(p.getUserId());
         users.add(u);

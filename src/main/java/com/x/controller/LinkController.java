@@ -107,10 +107,10 @@ public class LinkController {
 
     @ResponseBody
     @RequestMapping("/add/pro")
-    public Map addLinkPro(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+    public Map addLinkPro(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
         Map<String,Boolean> map = new HashMap();
 
-        map.put("data",linkService.addLinkPro(new UserPro(id,Integer.valueOf(userid))));
+        map.put("data",linkService.addLinkPro(new UserPro(id,uid), Integer.parseInt(userid)));
 
         return map;
 
@@ -118,10 +118,10 @@ public class LinkController {
 
     @ResponseBody
     @RequestMapping("/add/task")
-    public Map addLinkTask(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+    public Map addLinkTask(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
         Map<String,Boolean> map = new HashMap();
 
-        map.put("data",linkService.addLinkTask(new UserTask(id,Integer.valueOf(userid))));
+        map.put("data",linkService.addLinkTask(new UserTask(id,uid), Integer.parseInt(userid)));
 
         return map;
 
@@ -129,10 +129,10 @@ public class LinkController {
 
     @ResponseBody
     @RequestMapping("/add/bug")
-    public Map addLinkBug(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+    public Map addLinkBug(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
         Map<String,Boolean> map = new HashMap();
 
-        map.put("data",linkService.addLinkBug(new UserBug(id,Integer.valueOf(userid))));
+        map.put("data",linkService.addLinkBug(new UserBug(id,uid), Integer.parseInt(userid)));
 
         return map;
 
@@ -140,10 +140,10 @@ public class LinkController {
 
     @ResponseBody
     @RequestMapping("/del/pro")
-    public Map delLinkPro(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+    public Map delLinkPro(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
         Map<String,Boolean> map = new HashMap();
 
-        map.put("data",linkService.delLinkPro(new UserPro(id,Integer.valueOf(userid))));
+        map.put("data",linkService.delLinkPro(new UserPro(id,uid), Integer.parseInt(userid)));
 
         return map;
 
@@ -151,10 +151,10 @@ public class LinkController {
 
     @ResponseBody
     @RequestMapping("/del/task")
-    public Map delLinkTask(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+    public Map delLinkTask(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
         Map<String,Boolean> map = new HashMap();
 
-        map.put("data",linkService.delLinkTask(new UserTask(id,Integer.valueOf(userid))));
+        map.put("data",linkService.delLinkTask(new UserTask(id,uid),Integer.parseInt(userid)));
 
         return map;
 
@@ -162,10 +162,10 @@ public class LinkController {
 
     @ResponseBody
     @RequestMapping("/del/bug")
-    public Map delLinkBug(@RequestParam("id") int id,@ModelAttribute("userid") String userid){
+    public Map delLinkBug(@RequestParam("id") int id,@RequestParam("uid") int uid,@ModelAttribute("userid") String userid){
         Map<String,Boolean> map = new HashMap();
 
-        map.put("data",linkService.delLinkBug(new UserBug(id,Integer.valueOf(userid))));
+        map.put("data",linkService.delLinkBug(new UserBug(id,uid),Integer.parseInt(userid)));
 
         return map;
 
