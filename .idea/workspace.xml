@@ -2,8 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06244dc1-37e2-4868-aaeb-90129b78eb1c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/BugController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/BugController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/ErrorController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/ErrorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/ProjectController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/ProjectController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/TaskController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/TaskController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/filter/SimpleCORSFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/x/filter/SimpleCORSFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/filter/TokenFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/x/filter/TokenFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/BugMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/BugMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/ProjectMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/ProjectMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/TaskMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/TaskMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/UserBugMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/UserBugMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/UserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/UserProMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/UserProMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/UserTaskMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/UserTaskMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/Bug.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/Bug.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/Project.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/Project.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/Task.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/Task.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/UserBug.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/UserBug.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/UserPro.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/UserPro.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/UserTask.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/UserTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/BugService.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/BugService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/LinkService.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/LinkService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/ProjectService.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/ProjectService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/TaskService.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/TaskService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/BugServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/BugServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/LinkServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/LinkServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/ProjectServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/ProjectServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/TaskServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/TaskServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/util/Page.class" afterPath="$PROJECT_DIR$/target/classes/com/x/util/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/util/TokenUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/x/util/TokenUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestMyBatis.class" afterPath="$PROJECT_DIR$/target/test-classes/TestMyBatis.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/BugController.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/BugController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/ErrorController.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/ErrorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/ProjectController.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/ProjectController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/TaskController.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/TaskController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/UserController.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/filter/SimpleCORSFilter.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/filter/SimpleCORSFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/filter/TokenFilter.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/filter/TokenFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/BugMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/BugMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/ProjectMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/ProjectMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/TaskMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/TaskMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/UserBugMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/UserBugMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/UserMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/UserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/UserProMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/UserProMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/UserTaskMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/UserTaskMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Bug.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Bug.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Project.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Project.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Task.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Task.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/User.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/UserBug.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/UserBug.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/UserPro.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/UserPro.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/UserTask.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/UserTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/BugService.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/BugService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/LinkService.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/LinkService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/ProjectService.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/ProjectService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/TaskService.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/TaskService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/UserService.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/BugServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/BugServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/LinkServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/LinkServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/ProjectServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/ProjectServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/TaskServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/TaskServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/util/Page.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/util/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/util/TokenUtil.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/util/TokenUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zero.iml" afterPath="$PROJECT_DIR$/zero.iml" />
     </list>
     <ignored path="zero.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,12 +106,34 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="-274">
               <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="false" />
                 <element signature="e#2572#2573#0" expanded="false" />
                 <element signature="e#2624#2625#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BugController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-507">
+              <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#924#925#0" expanded="false" />
+                <element signature="e#969#970#0" expanded="false" />
+                <element signature="e#1295#1296#0" expanded="false" />
+                <element signature="e#1339#1340#0" expanded="false" />
+                <element signature="e#1443#1444#0" expanded="false" />
+                <element signature="e#1495#1496#0" expanded="false" />
+                <element signature="e#1877#1878#0" expanded="false" />
+                <element signature="e#1931#1932#0" expanded="false" />
+                <element signature="e#2837#2838#0" expanded="false" />
+                <element signature="e#2889#2890#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -57,12 +149,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LinkServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="885">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,9 +164,21 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="90">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+              <folding>
+                <marker date="1477486338895" expanded="true" signature="1970:2068" ph="delete from " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -852,7 +958,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -860,7 +966,7 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43681747" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4555382" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5943838" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -924,7 +1030,8 @@
     <MESSAGE value="进行接口测试" />
     <MESSAGE value="修改返回参数，根正bug" />
     <MESSAGE value="修改版本号" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改版本号" />
+    <MESSAGE value="修改LinkService防止空SQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改LinkService防止空SQL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1160,16 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="78" />
-          <folding>
-            <marker date="1477486338895" expanded="true" signature="1970:2068" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/TaskMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1286,17 +1383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
-          <folding>
-            <element signature="e#648#649#0" expanded="false" />
-            <element signature="e#677#678#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/UserProMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1306,26 +1392,6 @@
             <marker date="1477479686599" expanded="true" signature="701:769" ph="select pro_i... user_pro" />
             <marker date="1477479686599" expanded="true" signature="847:952" ph="insert into user_pro... " />
             <marker date="1477479686599" expanded="true" signature="1029:1135" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2572#2573#0" expanded="false" />
-            <element signature="e#2624#2625#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1360,11 +1426,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <marker date="1477486338895" expanded="true" signature="1970:2068" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="885">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-274">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2572#2573#0" expanded="false" />
+            <element signature="e#2624#2625#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-507">
+          <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#924#925#0" expanded="false" />
+            <element signature="e#969#970#0" expanded="false" />
+            <element signature="e#1295#1296#0" expanded="false" />
+            <element signature="e#1339#1340#0" expanded="false" />
+            <element signature="e#1443#1444#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1877#1878#0" expanded="false" />
+            <element signature="e#1931#1932#0" expanded="false" />
+            <element signature="e#2837#2838#0" expanded="false" />
+            <element signature="e#2889#2890#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -35,7 +35,7 @@ public class LinkServiceImpl implements LinkService {
     @Override
     public List<User> getUserByJoinPro(int id) {
         List<Integer> list = this.userProMapper.selectUserIdByProId(id);
-        if(list==null)return null;
+        if(list.size()==0)return null;
         List<User> list1= this.userMapper.selectAllById(list);
         return list1;
     }
@@ -43,7 +43,7 @@ public class LinkServiceImpl implements LinkService {
     @Override
     public List<User> getUserByJoinTask(int id) {
         List<Integer> list = this.userTaskMapper.selectUserIdByTaskId(id);
-        if(list==null)return null;
+        if(list.size()==0)return null;
         List<User> list1 = this.userMapper.selectAllById(list);
         return list1;
     }
@@ -51,7 +51,7 @@ public class LinkServiceImpl implements LinkService {
     @Override
     public List<User> getUserByJoinBug(int id) {
         List<Integer> list = this.userBugMapper.selectUserIdByBugId(id);
-        if(list==null)return null;
+        if(list.size()==0)return null;
         List<User> list1 = this.userMapper.selectAllById(list);
         return list1;
     }
@@ -59,7 +59,7 @@ public class LinkServiceImpl implements LinkService {
     @Override
     public List<Project> getProByJoinUser(int id) {
         List<Integer> list = this.userProMapper.selectProIdByUserId(id);
-        if(list==null)return null;
+        if(list.size()==0)return null;
         List<Project> list1 = this.projectMapper.selectAllById(list);
         return list1;
     }
@@ -67,7 +67,7 @@ public class LinkServiceImpl implements LinkService {
     @Override
     public List<Task> getTaskByJoinUser(int id) {
         List<Integer> list = this.userTaskMapper.selectUserIdByTaskId(id);
-        if(list==null)return null;
+        if(list.size()==0)return null;
         List<Task> list1 = this.taskMapper.selectAllById(list);
         return list1;
     }
@@ -75,7 +75,7 @@ public class LinkServiceImpl implements LinkService {
     @Override
     public List<Bug> getBugByJoinUser(int id) {
         List<Integer> list = this.userBugMapper.selectBugIdByUserId(id);
-        if(list==null)return null;
+        if(list.size()==0)return null;
         List<Bug> list1 = this.bugMapper.selectAllById(list);
         return list1;
     }
