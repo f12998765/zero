@@ -1,7 +1,6 @@
 package com.x.controller;
 
 import com.x.model.Project;
-import com.x.model.User;
 import com.x.service.ProjectService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +19,9 @@ import java.util.*;
 public class ProjectController {
 
     @ModelAttribute("userid")
-    public String getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
+    public int getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
     {
-        return userid;
+        return Integer.parseInt(userid);
     }
 
     @Resource
@@ -30,53 +29,114 @@ public class ProjectController {
 
     @ResponseBody
     @RequestMapping("/get")
-    public Project getById( @RequestParam("id") int id){
-        return projectService.getProjectById(id);
+    public Map<String, Object> getById(@RequestParam("id") String pro_id){
+        Map<String, Object> map=new HashMap<>();
+        try{
+            int id= Integer.parseInt(pro_id);
+            Project p = projectService.getProjectById(id);
+            map.put("data",p);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall")
-    public List<Project> getAll(){
-        return projectService.getAllProject();
+    public Map getAll(){
+        Map map = new HashMap();
+        map.put("data",projectService.getAllProject());
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall/page")
-    public List<Project> getAllPage(@RequestParam("num") int pageNow,@RequestParam(name = "size",defaultValue = "5") int pageSize){
-        return projectService.getPage(pageNow,pageSize);
+    public Map getAllPage(@RequestParam("num") String pageNow_,@RequestParam(name = "size",defaultValue = "5") String pageSize_){
+        Map map = new HashMap();
+        try{
+            int pageNow=Integer.parseInt(pageNow_);
+            int pageSize=Integer.parseInt(pageSize_);
+            List<Project> projects = projectService.getPage(pageNow,pageSize);
+            map.put("data",projects);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall/sum")
-    public int getAllCount(){
-        return projectService.getCount();
+    public Map getAllCount(){
+        Map map = new HashMap();
+        map.put("data",projectService.getCount());
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/add")
-    public boolean add(@ModelAttribute("userid") String userid,@RequestParam("info") String info){
-
-        Project p = new Project(Integer.valueOf(userid),info, Date.from(Instant.now()));
-        return projectService.addProject(p);
+    public Map<String, Boolean> add(@ModelAttribute("userid") int userid, @RequestParam("info") String info){
+        Map<String, Boolean> map = new HashMap<String, Boolean>();
+        Project p = new Project(userid,info, Date.from(Instant.now()));
+        map.put("data",projectService.addProject(p));
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/del")
-    public boolean del(@ModelAttribute("userid") String userid,@RequestParam("id") int id){
-        return projectService.delProject(Integer.parseInt(userid),id);
+    public Map<String, java.io.Serializable> del(@ModelAttribute("userid") int userid, @RequestParam("id") String pro_id){
+        Map<String, java.io.Serializable> map=new HashMap<>();
+        try{
+            int id= Integer.parseInt(pro_id);
+            boolean boo = projectService.delProject(userid,id);
+            map.put("data",boo);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/put")
-    public boolean updata(@ModelAttribute("userid") String userid,@RequestParam("id") int id,@RequestParam("info") String info){
-        Project p = new Project(id, Integer.valueOf(userid),info);
-        return projectService.updataProject(p);
+    public Map<String, java.io.Serializable> updata(@ModelAttribute("userid") int userid, @RequestParam("id") String pro_id, @RequestParam("info") String info){
+        Map<String, java.io.Serializable> map = new HashMap<String, java.io.Serializable>();
+        try{
+            int id= Integer.parseInt(pro_id);
+            Project p = new Project(id, userid,info);
+            boolean boo = projectService.updataProject(p);
+            map.put("data",boo);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/build")
-    public List<Project> getProByUserId(@RequestParam("id") int id){
-        return projectService.getProByUserId(id);
+    public Map<String, Object> getProByUserId(@RequestParam("id") String user_id){
+        Map<String, Object> map = new HashMap<>();
+        try{
+            int id= Integer.parseInt(user_id);
+            List<Project> projects = projectService.getProByUserId(id);
+            map.put("data",projects);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
 

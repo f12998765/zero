@@ -30,7 +30,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/signin")
     public Map SignIn(@RequestParam("userid") String userid,@RequestParam("password") String password){
-        System.out.println("signin--userid:"+userid);
+        System.out.println("sign\tin\t"+userid);
 
         Map map = new HashMap();
 
@@ -60,7 +60,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping("signup")
     public Map SignUp(@RequestParam("username") String username, @RequestParam("userid") String userid, @RequestParam("password") String password){
-        System.out.println("signup--userid:"+userid);
+        System.out.println("sign\tup\t"+userid);
 
         Map map = new HashMap();
 

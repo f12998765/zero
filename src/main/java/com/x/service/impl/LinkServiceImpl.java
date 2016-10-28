@@ -66,7 +66,7 @@ public class LinkServiceImpl implements LinkService {
 
     @Override
     public List<Task> getTaskByJoinUser(int id) {
-        List<Integer> list = this.userTaskMapper.selectUserIdByTaskId(id);
+        List<Integer> list = this.userTaskMapper.selectTaskIdByUserId(id);
         if(list.size()==0)return null;
         List<Task> list1 = this.taskMapper.selectAllById(list);
         return list1;

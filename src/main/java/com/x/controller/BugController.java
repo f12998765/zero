@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.time.Instant;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/10/20.
@@ -21,79 +23,179 @@ public class BugController {
     private BugService bugService;
 
     @ModelAttribute("userid")
-    public String getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
+    public int getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
     {
-        return userid;
+        return Integer.parseInt(userid);
     }
-
     @ResponseBody
     @RequestMapping("/get")
-    public Bug getById(@RequestParam("id") int id){
-        Bug p = bugService.getBugById(id);
-        return p;
+    public Map getById(@RequestParam("id") String bug_id){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(bug_id);
+            Bug b = bugService.getBugById(id);
+            map.put("data",b);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall")
-    public List<Bug> getAll(){
-        return bugService.getAllBug();
+    public Map getAll(){
+        Map map = new HashMap();
+        map.put("data",bugService.getAllBug());
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall/page")
-    public List<Bug> getAllPage(@RequestParam("num") int pageNow,@RequestParam(name = "size",defaultValue = "5") int pageSize){
-        return bugService.getPage(pageNow,pageSize);
+    public Map getAllPage(@RequestParam("num") String pageNow_,@RequestParam(name = "size",defaultValue = "5") String pageSize_){
+        Map map = new HashMap();
+        try{
+            int pageNow=Integer.parseInt(pageNow_);
+            int pageSize=Integer.parseInt(pageSize_);
+            List<Bug> bugs = bugService.getPage(pageNow,pageSize);
+            map.put("data",bugs);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall/sum")
-    public int getAllCount(){
-        return bugService.getCount();
+    public Map getAllCount(){
+        Map map = new HashMap();
+        map.put("data",bugService.getCount());
+        return map;
     }
 
 
     @ResponseBody
     @RequestMapping("/gets")
-    public List<Bug> gets(@RequestParam("id") int id){
-        return bugService.getBugByTaskId(id);
+    public Map gets(@RequestParam("id") String task_id){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(task_id);
+            List<Bug> bugs = bugService.getBugByTaskId(id);
+            map.put("data",bugs);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/gets/page")
-    public List<Bug> getsPage(@RequestParam("id") int id,@RequestParam("num") int pageNow,@RequestParam(name = "size",defaultValue = "5") int pageSize){
-        return bugService.getPageByTaskId(pageNow,id,pageSize);
+    public Map getsPage(@RequestParam("id") String task_id,@RequestParam("num") String pageNow_,@RequestParam(name = "size",defaultValue = "5") String pageSize_){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(task_id);
+            int pageNow=Integer.parseInt(pageNow_);
+            int pageSize=Integer.parseInt(pageSize_);
+            List<Bug> bugs =  bugService.getPageByTaskId(pageNow,id,pageSize);
+            map.put("data",bugs);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/gets/sum")
-    public int getsCount(@RequestParam("id") int id){
-        return bugService.getCountByTaskId(id);
+    public Map getsCount(@RequestParam("id") String task_id){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(task_id);
+            int sum=bugService.getCountByTaskId(id);
+            map.put("data",sum);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/add")
-    public boolean add(@ModelAttribute("userid") String userid,@RequestParam("info") String info,@RequestParam("xid") int xid){
-        Bug b = new Bug(Integer.valueOf(userid),xid,info, Date.from(Instant.now()));
-        return bugService.addBug(b);
+    public Map add(@ModelAttribute("userid") int userid,@RequestParam("info") String info,@RequestParam("xid") String xid){
+        Map map = new HashMap();
+        try{
+            int pro_id= Integer.parseInt(xid);
+            Bug b = new Bug(userid,pro_id,info, Date.from(Instant.now()));
+            map.put("data",bugService.addBug(b));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/del")
-    public boolean del(@ModelAttribute("userid") String userid,@RequestParam("id") int id){
-        return bugService.delBug(Integer.parseInt(userid),id);
+    public Map del(@ModelAttribute("userid") int userid,@RequestParam("id") String bug_id){
+        Map map=new HashMap();
+        try{
+            int id= Integer.parseInt(bug_id);
+            map.put("data",bugService.delBug(userid,id));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/put")
-    public boolean updata(@ModelAttribute("userid") String userid,@RequestParam("id") int id,@RequestParam("info") String info){
-
-        Bug t = new Bug(id,Integer.valueOf(userid),info);
-        return bugService.updataBug(t);
+    public Map updata(@ModelAttribute("userid") int userid,@RequestParam("id") String bug_id,@RequestParam("info") String info){
+        Map map=new HashMap();
+        try{
+            int id= Integer.parseInt(bug_id);
+            Bug t = new Bug(id,userid,info);
+            map.put("data",bugService.updataBug(t));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/build")
-    public List<Bug> getProByUserId(@RequestParam("id") int id){
-        return bugService.getBugByUserId(id);
+    public Map getBugByUserId(@RequestParam("id") String user_id){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(user_id);
+            List<Bug> bugs = bugService.getBugByUserId(id);
+            map.put("data",bugs);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 }

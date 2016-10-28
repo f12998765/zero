@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.time.Instant;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/10/20.
@@ -21,78 +23,181 @@ public class TaskController {
     private TaskService taskService;
 
     @ModelAttribute("userid")
-    public String getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
+    public int getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
     {
-        return userid;
+        return Integer.parseInt(userid);
     }
 
     @ResponseBody
     @RequestMapping("/get")
-    public Task getById( @RequestParam("id") int id){
-        Task p = taskService.getTaskById(id);
-        return p;
+    public Map getById( @RequestParam("id") String task_id){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(task_id);
+            Task t = taskService.getTaskById(id);
+            map.put("data",t);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall")
-    public List<Task> getAll(){
-        return taskService.getAllTask();
+    public Map getAll(){
+        Map map = new HashMap();
+        map.put("data",taskService.getAllTask());
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall/page")
-    public List<Task> getAllPage(@RequestParam("num") int pageNow,@RequestParam(name = "size",defaultValue = "5") int pageSize){
-        return taskService.getPage(pageNow,pageSize);
+    public Map getAllPage(@RequestParam("num") String pageNow_,@RequestParam(name = "size",defaultValue = "5") String pageSize_){
+        Map map = new HashMap();
+        try{
+            int pageNow=Integer.parseInt(pageNow_);
+            int pageSize=Integer.parseInt(pageSize_);
+            List<Task> tasks = taskService.getPage(pageNow,pageSize);
+            map.put("data",tasks);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/getall/sum")
-    public int getAllCount(){
-        return taskService.getCount();
+    public Map getAllCount(){
+        Map map = new HashMap();
+        map.put("data",taskService.getCount());
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/gets")
-    public List<Task> gets(@RequestParam("id") int id){
-        return taskService.getTaskByProId(id);
+    public Map gets(@RequestParam("id") String pro_id){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(pro_id);
+            List<Task> tasks = taskService.getTaskByProId(id);
+            map.put("data",tasks);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/gets/page")
-    public List<Task> getsPage(@RequestParam("id") int id,@RequestParam("num") int pageNow,@RequestParam(name = "size",defaultValue = "5") int pageSize){
-        return taskService.getPageByProId(pageNow,id,pageSize);
+    public Map getsPage(@RequestParam("id") String pro_id,@RequestParam("num") String pageNow_,@RequestParam(name = "size",defaultValue = "5") String pageSize_){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(pro_id);
+            int pageNow=Integer.parseInt(pageNow_);
+            int pageSize=Integer.parseInt(pageSize_);
+            List<Task> tasks = taskService.getPageByProId(pageNow,id,pageSize);
+            map.put("data",tasks);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/gets/sum")
-    public int getsCount(@RequestParam("id") int id){
-        return taskService.getCountByProId(id);
+    public Map getsCount(@RequestParam("id") String pro_id){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(pro_id);
+            int sum=taskService.getCountByProId(id);
+            map.put("data",sum);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
 
     @ResponseBody
     @RequestMapping("/add")
-    public boolean add(@ModelAttribute("userid") String userid,@RequestParam("info") String info,@RequestParam("xid") int xid){
-        Task t = new Task(Integer.valueOf(userid),xid,info, Date.from(Instant.now()));
-        return taskService.addTask(t);
+    public Map add(@ModelAttribute("userid") int userid,@RequestParam("info") String info,@RequestParam("xid") String xid){
+        Map map = new HashMap();
+        try{
+            int pro_id= Integer.parseInt(xid);
+            Task t = new Task(userid,pro_id,info, Date.from(Instant.now()));
+
+            map.put("data",taskService.addTask(t));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/del")
-    public boolean del(@ModelAttribute("userid") String userid,@RequestParam("id") int id){
-        return taskService.delTask(Integer.parseInt(userid),id);
+    public Map del(@ModelAttribute("userid") int userid,@RequestParam("id") String task_id){
+        Map map=new HashMap();
+        try{
+            int id= Integer.parseInt(task_id);
+            map.put("data",taskService.delTask(userid,id));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/put")
-    public boolean updata(@ModelAttribute("userid") String userid,@RequestParam("id") int id,@RequestParam("info") String info){
-        Task t = new Task(id,Integer.valueOf(userid),info);
-        return taskService.updataTask(t);
+    public Map updata(@ModelAttribute("userid") int userid,@RequestParam("id") String task_id,@RequestParam("info") String info){
+        Map map=new HashMap();
+        try{
+            int id= Integer.parseInt(task_id);
+            Task t = new Task(id,userid,info);
+            map.put("data",taskService.updataTask(t));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 
     @ResponseBody
     @RequestMapping("/build")
-    public List<Task> getProByUserId(@RequestParam("id") int id){
-        return taskService.getTaskByUserId(id);
+    public Map getTaskByUserId(@RequestParam("id") String user_id){
+        Map map = new HashMap();
+        try{
+            int id= Integer.parseInt(user_id);
+            List<Task> tasks = taskService.getTaskByUserId(id);
+            map.put("data",tasks);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
     }
 }
