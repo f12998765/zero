@@ -15,7 +15,7 @@ public class UserUtil {
         if(userid.length()<6)
             return "用户名长度过短";
         else if(userid.length()>12)
-            return "用户名长度过短";
+            return "用户名长度过长";
 
         Pattern pattern = Pattern.compile("^[a-zA-Z]{1}([a-zA-Z0-9]){5,11}$");
         Matcher matcher= pattern.matcher(userid);
@@ -30,6 +30,11 @@ public class UserUtil {
 
 
     public static String ParsePassword(String password){
+        if(password.length()<8)
+            return "用户名长度过短";
+        else if(password.length()>16)
+            return "用户名长度过长";
+
         Pattern pattern = Pattern.compile("^[a-z0-9]{8,16}$");
         Matcher matcher= pattern.matcher(password);
         boolean boo = matcher.matches();
