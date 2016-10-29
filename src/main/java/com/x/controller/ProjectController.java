@@ -31,6 +31,12 @@ public class ProjectController {
     @RequestMapping("/get")
     public Map<String, Object> getById(@RequestParam("id") String pro_id){
         Map<String, Object> map=new HashMap<>();
+
+        if(pro_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(pro_id);
             Project p = projectService.getProjectById(id);
@@ -56,6 +62,10 @@ public class ProjectController {
     @RequestMapping("/getall/page")
     public Map getAllPage(@RequestParam("num") String pageNow_,@RequestParam(name = "size",defaultValue = "5") String pageSize_){
         Map map = new HashMap();
+        if(pageNow_==""||pageSize_==""){
+            map.put("error","参数为空");
+            return map;
+        }
         try{
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
@@ -80,8 +90,12 @@ public class ProjectController {
 
     @ResponseBody
     @RequestMapping("/add")
-    public Map<String, Boolean> add(@ModelAttribute("userid") int userid, @RequestParam("info") String info){
-        Map<String, Boolean> map = new HashMap<String, Boolean>();
+    public Map add(@ModelAttribute("userid") int userid, @RequestParam("info") String info){
+        Map map = new HashMap();
+        if(info==""){
+            map.put("error","参数为空");
+            return map;
+        }
         Project p = new Project(userid,info, Date.from(Instant.now()));
         map.put("data",projectService.addProject(p));
         return map;
@@ -89,8 +103,12 @@ public class ProjectController {
 
     @ResponseBody
     @RequestMapping("/del")
-    public Map<String, java.io.Serializable> del(@ModelAttribute("userid") int userid, @RequestParam("id") String pro_id){
-        Map<String, java.io.Serializable> map=new HashMap<>();
+    public Map del(@ModelAttribute("userid") int userid, @RequestParam("id") String pro_id){
+        Map map=new HashMap<>();
+        if(pro_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
         try{
             int id= Integer.parseInt(pro_id);
             boolean boo = projectService.delProject(userid,id);
@@ -106,8 +124,14 @@ public class ProjectController {
 
     @ResponseBody
     @RequestMapping("/put")
-    public Map<String, java.io.Serializable> updata(@ModelAttribute("userid") int userid, @RequestParam("id") String pro_id, @RequestParam("info") String info){
-        Map<String, java.io.Serializable> map = new HashMap<String, java.io.Serializable>();
+    public Map updata(@ModelAttribute("userid") int userid, @RequestParam("id") String pro_id, @RequestParam("info") String info){
+        Map map = new HashMap();
+
+        if(pro_id==""||info==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(pro_id);
             Project p = new Project(id, userid,info);
@@ -126,6 +150,11 @@ public class ProjectController {
     @RequestMapping("/build")
     public Map<String, Object> getProByUserId(@RequestParam("id") String user_id){
         Map<String, Object> map = new HashMap<>();
+        if(user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(user_id);
             List<Project> projects = projectService.getProByUserId(id);

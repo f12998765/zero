@@ -29,6 +29,12 @@ public class LinkController {
     @RequestMapping("/userbypro")
     public Map getUserByProId(@RequestParam("id") String pro_id){
         Map map = new HashMap();
+
+        if(pro_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(pro_id);
             map.put("data",linkService.getUserByJoinPro(id));
@@ -46,6 +52,12 @@ public class LinkController {
     @RequestMapping("/userbytask")
     public Map getUserByTaskId(@RequestParam("id") String task_id){
         Map map = new HashMap();
+
+        if(task_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(task_id);
             map.put("data",linkService.getUserByJoinTask(id));
@@ -63,6 +75,12 @@ public class LinkController {
     @RequestMapping("/userbybug")
     public Map getUserByBugId(@RequestParam("id") String bug_id){
         Map map = new HashMap();
+
+        if(bug_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(bug_id);
             map.put("data",linkService.getUserByJoinBug(id));
@@ -80,6 +98,12 @@ public class LinkController {
     @RequestMapping("/probyuser")
     public Map getProByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
+
+        if(user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(user_id);
             map.put("data",linkService.getProByJoinUser(id));
@@ -97,6 +121,12 @@ public class LinkController {
     @RequestMapping("/taskbyuser")
     public Map getTaskByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
+
+        if(user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(user_id);
             map.put("data",linkService.getTaskByJoinUser(id));
@@ -114,6 +144,12 @@ public class LinkController {
     @RequestMapping("/bugbyuser")
     public Map getBugByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
+
+        if(user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(user_id);
             map.put("data",linkService.getBugByJoinUser(id));
@@ -132,6 +168,12 @@ public class LinkController {
     @RequestMapping("/add/pro")
     public Map addLinkPro(@RequestParam("id") String pro_id,@RequestParam("uid") String user_id,@ModelAttribute("userid") int userid){
         Map map = new HashMap();
+
+        if(pro_id==""||user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id = Integer.parseInt(pro_id);
             int uid = Integer.parseInt(user_id);
@@ -150,6 +192,12 @@ public class LinkController {
     @RequestMapping("/add/task")
     public Map addLinkTask(@RequestParam("id") String task_id,@RequestParam("uid") String user_id,@ModelAttribute("userid") int userid){
         Map map = new HashMap();
+
+        if(task_id==""||user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id = Integer.parseInt(task_id);
             int uid = Integer.parseInt(user_id);
@@ -168,6 +216,12 @@ public class LinkController {
     @RequestMapping("/add/bug")
     public Map addLinkBug(@RequestParam("id") String bug_id,@RequestParam("uid") String user_id,@ModelAttribute("userid") int userid){
         Map map = new HashMap();
+
+        if(bug_id==""||user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id = Integer.parseInt(bug_id);
             int uid = Integer.parseInt(user_id);
@@ -186,6 +240,12 @@ public class LinkController {
     @RequestMapping("/del/pro")
     public Map delLinkPro(@RequestParam("id") String pro_id,@RequestParam("uid") String user_id,@ModelAttribute("userid") int userid){
         Map map = new HashMap();
+
+        if(pro_id==""||user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id = Integer.parseInt(pro_id);
             int uid = Integer.parseInt(user_id);
@@ -204,6 +264,12 @@ public class LinkController {
     @RequestMapping("/del/task")
     public Map delLinkTask(@RequestParam("id") String task_id,@RequestParam("uid") String user_id,@ModelAttribute("userid") int userid){
         Map map = new HashMap();
+
+        if(task_id==""||user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id = Integer.parseInt(task_id);
             int uid = Integer.parseInt(user_id);
@@ -222,6 +288,12 @@ public class LinkController {
     @RequestMapping("/del/bug")
     public Map delLinkBug(@RequestParam("id") String bug_id,@RequestParam("uid") String user_id,@ModelAttribute("userid") int userid){
         Map map = new HashMap();
+
+        if(bug_id==""||user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id = Integer.parseInt(bug_id);
             int uid = Integer.parseInt(user_id);

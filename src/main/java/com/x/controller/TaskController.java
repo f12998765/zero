@@ -32,6 +32,12 @@ public class TaskController {
     @RequestMapping("/get")
     public Map getById( @RequestParam("id") String task_id){
         Map map = new HashMap();
+
+        if(task_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(task_id);
             Task t = taskService.getTaskById(id);
@@ -57,6 +63,12 @@ public class TaskController {
     @RequestMapping("/getall/page")
     public Map getAllPage(@RequestParam("num") String pageNow_,@RequestParam(name = "size",defaultValue = "5") String pageSize_){
         Map map = new HashMap();
+
+        if(pageNow_==""||pageSize_==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
@@ -83,6 +95,14 @@ public class TaskController {
     @RequestMapping("/gets")
     public Map gets(@RequestParam("id") String pro_id){
         Map map = new HashMap();
+
+
+        if(pro_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
+
         try{
             int id= Integer.parseInt(pro_id);
             List<Task> tasks = taskService.getTaskByProId(id);
@@ -100,6 +120,12 @@ public class TaskController {
     @RequestMapping("/gets/page")
     public Map getsPage(@RequestParam("id") String pro_id,@RequestParam("num") String pageNow_,@RequestParam(name = "size",defaultValue = "5") String pageSize_){
         Map map = new HashMap();
+
+        if(pro_id==""||pageNow_==""||pageSize_==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(pro_id);
             int pageNow=Integer.parseInt(pageNow_);
@@ -119,6 +145,12 @@ public class TaskController {
     @RequestMapping("/gets/sum")
     public Map getsCount(@RequestParam("id") String pro_id){
         Map map = new HashMap();
+
+        if(pro_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(pro_id);
             int sum=taskService.getCountByProId(id);
@@ -137,6 +169,12 @@ public class TaskController {
     @RequestMapping("/add")
     public Map add(@ModelAttribute("userid") int userid,@RequestParam("info") String info,@RequestParam("xid") String xid){
         Map map = new HashMap();
+
+        if(info==""||xid==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int pro_id= Integer.parseInt(xid);
             Task t = new Task(userid,pro_id,info, Date.from(Instant.now()));
@@ -155,6 +193,12 @@ public class TaskController {
     @RequestMapping("/del")
     public Map del(@ModelAttribute("userid") int userid,@RequestParam("id") String task_id){
         Map map=new HashMap();
+
+        if(task_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(task_id);
             map.put("data",taskService.delTask(userid,id));
@@ -171,6 +215,12 @@ public class TaskController {
     @RequestMapping("/put")
     public Map updata(@ModelAttribute("userid") int userid,@RequestParam("id") String task_id,@RequestParam("info") String info){
         Map map=new HashMap();
+
+        if(task_id==""||info==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(task_id);
             Task t = new Task(id,userid,info);
@@ -188,6 +238,12 @@ public class TaskController {
     @RequestMapping("/build")
     public Map getTaskByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
+
+        if(user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
         try{
             int id= Integer.parseInt(user_id);
             List<Task> tasks = taskService.getTaskByUserId(id);

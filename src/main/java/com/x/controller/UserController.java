@@ -34,6 +34,12 @@ public class UserController {
 
         Map map = new HashMap();
 
+        if(userid==""||password==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
+
         User u = userService.getUserByNameId(userid);
 
         if(u==null){
@@ -64,6 +70,10 @@ public class UserController {
 
         Map map = new HashMap();
 
+        if(userid==""||username==""||password==""){
+            map.put("error","参数为空");
+            return map;
+        }
         User u = userService.getUserByNameId(userid);
 
         if(u != null){
