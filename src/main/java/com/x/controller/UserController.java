@@ -5,6 +5,7 @@ import com.x.model.User;
 import com.x.service.LinkService;
 import com.x.service.UserService;
 import com.x.util.TokenUtil;
+import com.x.util.UserUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -39,7 +40,17 @@ public class UserController {
             return map;
         }
 
+        String msg1 =  UserUtil.ParseUserId(userid);
+        if(!"ok".equals(msg1)){
+            map.put("error",msg1);
+            return map;
+        }
 
+        String msg2 = UserUtil.ParsePassword(password);
+        if(!"ok".equals(msg2)){
+            map.put("error",msg2);
+            return map;
+        }
         User u = userService.getUserByNameId(userid);
 
         if(u==null){
@@ -72,6 +83,18 @@ public class UserController {
 
         if(userid==""||username==""||password==""){
             map.put("error","参数为空");
+            return map;
+        }
+
+        String msg1 =  UserUtil.ParseUserId(userid);
+        if(!"ok".equals(msg1)){
+            map.put("error",msg1);
+            return map;
+        }
+
+        String msg2 = UserUtil.ParsePassword(password);
+        if(!"ok".equals(msg2)){
+            map.put("error",msg2);
             return map;
         }
         User u = userService.getUserByNameId(userid);
