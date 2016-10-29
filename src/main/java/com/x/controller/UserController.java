@@ -80,7 +80,10 @@ public class UserController {
         System.out.println("sign\tup\t"+userid);
 
         Map map = new HashMap();
-
+        if(username.contains("胖")||username.contains("pang")){
+            map.put("error","sb-->tongyang");
+            return map;
+        }
         if(userid==""||username==""||password==""){
             map.put("error","参数为空");
             return map;
