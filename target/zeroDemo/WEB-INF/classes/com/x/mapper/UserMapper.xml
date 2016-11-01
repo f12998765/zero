@@ -11,9 +11,13 @@
     id, userId, passWord, userName
   </sql>
 
+  <sql id="No_password_List" >
+    id, userId, userName
+  </sql>
+
   <select id="selectAllById" resultMap="BaseResultMap"  parameterType="java.lang.Integer">
     select
-    <include refid="Base_Column_List" />
+    <include refid="No_password_List" />
     from user
     where id IN
       <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
@@ -23,7 +27,9 @@
 
   <!--查询所有-->
   <select id="selectAll" resultMap="BaseResultMap">
-    select * from task
+    select
+    <include refid="No_password_List" />
+    from user
   </select>
 
   <!--按用户名查询-->

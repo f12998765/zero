@@ -146,6 +146,11 @@ public class UserController {
         try{
             int id= Integer.parseInt(user_id);
             User user= userService.getUserById(id);
+            if(user==null){
+                map.put("error","用户不存在");
+                return map;
+            }
+
             user.setPassword("*********");
             map.put("data",user);
         }catch (NumberFormatException no){
