@@ -127,8 +127,35 @@ public class UserController {
 
     @ResponseBody
     @RequestMapping("getall")
-    public List<User> getAll(){
-        return this.userService.getAllUser();
+    public Map getAll(){
+        Map map = new HashMap();
+        map.put("data",this.userService.getAllUser());
+        return map;
     }
+
+    @ResponseBody
+    @RequestMapping("get")
+    public Map<String, Object> getById(@RequestParam("id") String user_id){
+        Map<String, Object> map=new HashMap<>();
+
+        if(user_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
+        try{
+            int id= Integer.parseInt(user_id);
+            User user= userService.getUserById(id);
+            user.setPassword("*********");
+            map.put("data",user);
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
+    }
+
 
 }

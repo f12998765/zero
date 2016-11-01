@@ -32,13 +32,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public List<User> getAllUser() {
-        List<User> users = this.userMapper.selectAll();
-
-        for(User u :users){
-            u.setPassword("********");
-        }
-
-        return users;
+        return this.userMapper.selectAll();
     }
 
     public boolean addUser(User user) {
