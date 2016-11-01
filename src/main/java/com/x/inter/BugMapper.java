@@ -10,7 +10,7 @@ import java.util.List;
 public interface BugMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int deleteByUserIdAndBugId(@Param("id")Integer id,@Param("userId")Integer userid);
+    int deleteByUserIdAndBugId(@Param("userId")Integer userid,@Param("id")Integer id);
 
     int insert(Bug record);
 

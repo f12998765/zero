@@ -10,7 +10,7 @@ import java.util.List;
 public interface TaskMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int deleteByUserIdAndTaskId(@Param("id")Integer id,@Param("userId")Integer userid);
+    int deleteByUserIdAndTaskId(@Param("userId")Integer userid,@Param("id")Integer id);
 
     int insert(Task record);
 

@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
 public class UserUtil {
 
     public static String ParseUserId(String userid){
-        System.out.println("userid:\t"+userid.length());
         if(userid.length()<6)
             return "用户名长度过短";
         else if(userid.length()>12)
@@ -30,7 +29,6 @@ public class UserUtil {
 
 
     public static String ParsePassword(String password){
-        System.out.println("password:\t"+password.length());
         if(password.length()<8)
             return "密码长度过短";
         else if(password.length()>16)

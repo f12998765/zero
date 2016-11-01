@@ -31,7 +31,6 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/signin")
     public Map SignIn(@RequestParam("userid") String userid,@RequestParam("password") String password){
-        System.out.println("sign\tin\t"+userid);
 
         Map map = new HashMap();
 
@@ -57,7 +56,7 @@ public class UserController {
             map.put("error","用户不存在");
             return map;
         }
-
+        System.out.println("sign\tin\t"+u.getId()+"\t"+u.getUserid());
         if(password.equals(u.getPassword())){
             try {
                 String token = TokenUtil.CreatToken(u.getId(),"zeroOne",10800);
@@ -77,10 +76,10 @@ public class UserController {
     @ResponseBody
     @RequestMapping("signup")
     public Map SignUp(@RequestParam("username") String username, @RequestParam("userid") String userid, @RequestParam("password") String password){
-        System.out.println("sign\tup\t"+userid);
+
 
         Map map = new HashMap();
-        if(username.contains("胖")||username.contains("pang")){
+        if(username.contains("胖")||username.contains("pang")||userid.contains("pang")){
             map.put("error","sb-->tongyang");
             return map;
         }
@@ -115,6 +114,8 @@ public class UserController {
                 map.put("error","注册失败");
                 return map;
             }
+
+            System.out.println("sign\tup\t"+newUser.getId()+"\t"+newUser.getUserid());
             String token = TokenUtil.CreatToken(newUser.getId(),"zeroOne",10800);
             map.put("token",token);
             map.put("id",newUser.getId());

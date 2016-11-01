@@ -10,7 +10,7 @@ import java.util.List;
 public interface ProjectMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int deleteByUserIdAndProId(@Param("id")Integer id,@Param("userId")Integer userid);
+    int deleteByUserIdAndProId(@Param("userId")Integer userid,@Param("id")Integer id);
 
     int insert(Project record);
 
