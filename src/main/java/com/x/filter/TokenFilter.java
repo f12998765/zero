@@ -45,7 +45,7 @@ public class TokenFilter implements Filter {
         final String authHeader = request.getHeader("Authorization");
 
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-            request.getRequestDispatcher("/error?info=权限不足，请登录").forward(request, response);
+            request.getRequestDispatcher("/error?msg=权限不足，请登录").forward(request, response);
             return;
         }
 
@@ -58,10 +58,10 @@ public class TokenFilter implements Filter {
             request.setAttribute("userid",claims.getIssuer());
 
         } catch (ExpiredJwtException e) {
-            request.getRequestDispatcher("/error?info=登录超时，请重新登录").forward(request, response);
+            request.getRequestDispatcher("/error?msg=登录超时，请重新登录").forward(request, response);
             return;
         } catch (Exception e) {
-            request.getRequestDispatcher("/error?info=你要干啥").forward(request, response);
+            request.getRequestDispatcher("/error?msg=你要干啥").forward(request, response);
             return;
         }
 

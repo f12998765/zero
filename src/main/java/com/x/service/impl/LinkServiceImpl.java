@@ -6,6 +6,7 @@ import com.x.service.LinkService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -151,10 +152,16 @@ public class LinkServiceImpl implements LinkService {
 
     @Override
     public List<User> getAllUserForTask(int id) {
-        List<User> users = this.getUserByJoinPro(id);
         Project p = this.projectMapper.selectByPrimaryKey(id);
         User u = this.userMapper.selectByPrimaryKey(p.getUserId());
+
+        List<User> users = new ArrayList<>();
         users.add(u);
+
+        List<User> us= this.getUserByJoinPro(id);
+        if(us!=null)
+            users.addAll(us);
+
         return users;
     }
 

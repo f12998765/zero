@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by Administrator on 2016/10/20.
@@ -37,12 +38,12 @@ public class TaskServiceImpl implements TaskService {
         List<User> users = this.linkService.getAllUserForTask(task.getProId());
         boolean boo = false;
         for(User u : users){
-            if(task.getUserId() == u.getId()){
+            if(Objects.equals(task.getUserId(), u.getId())){
                 boo = true;
                 break;
             }
         }
-        if(boo&&this.taskMapper.insert(task) == 1) return true;
+        if(boo&&this.taskMapper.insertSelective(task) == 1) return true;
         return false;
     }
 

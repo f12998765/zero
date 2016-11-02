@@ -37,13 +37,13 @@ public class BugServiceImpl implements BugService {
         List<User> users = this.linkService.getAllUserForBug(bug.getTaskId());
         boolean boo = false;
         for(User u : users){
-            if(bug.getUserId() == u.getId()){
+            if(Objects.equals(bug.getUserId(), u.getId())){
                 boo = true;
                 break;
             }
         }
 
-        if(boo&&this.bugMapper.insert(bug) == 1) return true;
+        if(boo&&this.bugMapper.insertSelective(bug) == 1) return true;
         return false;
     }
 

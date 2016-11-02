@@ -223,7 +223,7 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(task_id);
-            Task t = new Task(id,userid,info);
+            Task t = new Task(id,info);
             map.put("data",taskService.updataTask(t));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");

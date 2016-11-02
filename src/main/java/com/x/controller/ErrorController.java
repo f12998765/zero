@@ -16,11 +16,11 @@ public class ErrorController {
 
     @ResponseBody
     @RequestMapping("/error")
-    public Map<String,String> showErrorInfo(@RequestParam("info") String info){
+    public Map<String,String> showErrorInfo(@RequestParam("msg") String msg){
 
         Map<String,String> map = new HashMap();
 
-        map.put("error",info);
+        map.put("error",msg);
         return map;
     }
 

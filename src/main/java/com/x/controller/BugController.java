@@ -174,8 +174,8 @@ public class BugController {
         }
 
         try{
-            int pro_id= Integer.parseInt(xid);
-            Bug b = new Bug(userid,pro_id,info, Date.from(Instant.now()));
+            int task_id= Integer.parseInt(xid);
+            Bug b = new Bug(userid,task_id,info, Date.from(Instant.now()));
             map.put("data",bugService.addBug(b));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -220,7 +220,7 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(bug_id);
-            Bug t = new Bug(id,userid,info);
+            Bug t = new Bug(id,info);
             map.put("data",bugService.updataBug(t));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");

@@ -56,13 +56,6 @@ public class Task {
     public Task() {
     }
 
-    public Task(Integer id, Integer userId, Integer proId, String info) {
-        this.id = id;
-        this.userId = userId;
-        this.proId = proId;
-        this.info = info;
-    }
-
     public Task(Integer userId, Integer proId, String info, Date begin) {
 
         this.userId = userId;
@@ -71,11 +64,6 @@ public class Task {
         this.begin = begin;
     }
 
-    public Task(Integer id, Integer userId, String info) {
-        this.id = id;
-        this.userId = userId;
-        this.info = info;
-    }
 
     public Task(Integer id, String info) {
 

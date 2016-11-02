@@ -56,12 +56,6 @@ public class Bug {
     public Bug() {
     }
 
-    public Bug(Integer id, Integer userId, Integer taskId, String info) {
-        this.id = id;
-        this.userId = userId;
-        this.taskId = taskId;
-        this.info = info;
-    }
 
     public Bug(Integer userId, Integer taskId, String info, Date begin) {
         this.userId = userId;
@@ -70,11 +64,7 @@ public class Bug {
         this.begin = begin;
     }
 
-    public Bug(Integer id, Integer userId, String info) {
-        this.id = id;
-        this.userId = userId;
-        this.info = info;
-    }
+
 
     public Bug(Integer id, String info) {
         this.id = id;
