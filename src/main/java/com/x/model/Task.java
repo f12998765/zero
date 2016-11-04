@@ -65,8 +65,8 @@ public class Task {
     }
 
 
-    public Task(Integer id, String info) {
-
+    public Task(Integer id,Integer userId, String info) {
+        this.userId = userId;
         this.id = id;
         this.info = info;
     }

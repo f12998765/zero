@@ -66,7 +66,8 @@ public class Bug {
 
 
 
-    public Bug(Integer id, String info) {
+    public Bug(Integer id, Integer userId, String info) {
+        this.userId = userId;
         this.id = id;
         this.info = info;
     }

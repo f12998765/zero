@@ -220,7 +220,7 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(bug_id);
-            Bug t = new Bug(id,info);
+            Bug t = new Bug(id,userid,info);
             map.put("data",bugService.updataBug(t));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
