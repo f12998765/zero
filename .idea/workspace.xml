@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06244dc1-37e2-4868-aaeb-90129b78eb1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/ErrorController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/ErrorController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/filter/TokenFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/x/filter/TokenFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/TaskServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/TaskServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/ErrorController.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/ErrorController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/filter/TokenFilter.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/filter/TokenFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/TaskServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/TaskServiceImpl.class" />
+    <list default="true" id="06244dc1-37e2-4868-aaeb-90129b78eb1c" name="Default" comment="修改逻辑错误，不能在自己的实体中添加或删除自己">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/BugController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/BugController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/controller/TaskController.class" afterPath="$PROJECT_DIR$/target/classes/com/x/controller/TaskController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/Bug.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/Bug.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/model/Task.class" afterPath="$PROJECT_DIR$/target/classes/com/x/model/Task.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/BugController.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/BugController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/TaskController.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/controller/TaskController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Bug.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Bug.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Task.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/model/Task.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/controller/TaskController.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/controller/TaskController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/model/Bug.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/model/Bug.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/model/Task.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/model/Task.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" />
     </list>
     <ignored path="zero.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,71 +42,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Task.java">
+      <file leaf-file-name="LinkController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+            <state relative-caret-position="528">
+              <caret line="322" column="13" selection-start-line="322" selection-start-column="13" selection-end-line="322" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/TaskController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bug.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Bug.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BugController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="222" column="38" selection-start-line="222" selection-start-column="38" selection-end-line="222" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/ProjectController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-973">
-              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Project.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Project.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -142,7 +91,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/TaskMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/inter/ProjectMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java" />
@@ -161,6 +109,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/x/model/Bug.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/TaskController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -227,6 +176,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -453,6 +403,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="inter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -460,7 +440,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -816,26 +795,26 @@
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45865834" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43681747" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40093604" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45865834" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40093604" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -868,8 +847,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加权限，只有创建者才能删除修改" />
-    <MESSAGE value="添加 LinkController 映射参与关系，补充添加删除关系方法" />
     <MESSAGE value="修改映射路径" />
     <MESSAGE value="为创建task和bug添加权限" />
     <MESSAGE value="删除请求时的用户参数，修改token生成参数" />
@@ -893,7 +870,9 @@
     <MESSAGE value="添加获取用户信息的接口" />
     <MESSAGE value="修改获取用户不存在时，报服务器异常" />
     <MESSAGE value="修复task和bug添加错误，以及error跳转参数重复" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复task和bug添加错误，以及error跳转参数重复" />
+    <MESSAGE value="修复task和bug修改错误" />
+    <MESSAGE value="修改逻辑错误，不能在自己的实体中添加或删除自己" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改逻辑错误，不能在自己的实体中添加或删除自己" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1009,13 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="291" column="33" selection-start-line="291" selection-start-column="33" selection-end-line="291" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1142,10 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#1903#1904#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1153,23 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="148" column="56" selection-start-line="148" selection-start-column="56" selection-end-line="148" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,36 +1129,6 @@
         <state relative-caret-position="390">
           <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
-          <folding>
-            <marker date="1477554725304" expanded="true" signature="1060:1167" ph="select from bug" />
-            <marker date="1477554725304" expanded="true" signature="1252:1269" ph="select * fro... bug" />
-            <marker date="1477554725304" expanded="true" signature="1362:1386" ph="SELECT COUNT... bug" />
-            <marker date="1477554725304" expanded="true" signature="1475:1569" ph="select from bug" />
-            <marker date="1477554725304" expanded="true" signature="1699:1807" ph="select from bug" />
-            <marker date="1477554725304" expanded="true" signature="1911:2049" ph="select from bug" />
-            <marker date="1477554725304" expanded="true" signature="2156:2224" ph="SELECT COUNT... bug" />
-            <marker date="1477554725304" expanded="true" signature="2339:2438" ph="select from bug" />
-            <marker date="1477554725304" expanded="true" signature="2525:2578" ph="delete from " />
-            <marker date="1477554725304" expanded="true" signature="2670:2764" ph="delete from " />
-            <marker date="1477554725304" expanded="true" signature="2838:3050" ph="insert into bug... " />
-            <marker date="1477554725304" expanded="true" signature="4595:4791" ph="update bug i... " />
-            <marker date="1477554725304" expanded="true" signature="4877:5096" ph="update bug s... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1267,31 +1188,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
+        <state relative-caret-position="720">
           <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Bug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="222" column="38" selection-start-line="222" selection-start-column="38" selection-end-line="222" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Project.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
+        <state relative-caret-position="585">
           <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding />
         </state>
@@ -1299,8 +1204,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-973">
+        <state relative-caret-position="690">
           <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Bug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/TaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <marker date="1477554725304" expanded="true" signature="1060:1167" ph="select from bug" />
+            <marker date="1477554725304" expanded="true" signature="1252:1269" ph="select * fro... bug" />
+            <marker date="1477554725304" expanded="true" signature="1362:1386" ph="SELECT COUNT... bug" />
+            <marker date="1477554725304" expanded="true" signature="1475:1569" ph="select from bug" />
+            <marker date="1477554725304" expanded="true" signature="1699:1807" ph="select from bug" />
+            <marker date="1477554725304" expanded="true" signature="1911:2049" ph="select from bug" />
+            <marker date="1477554725304" expanded="true" signature="2156:2224" ph="SELECT COUNT... bug" />
+            <marker date="1477554725304" expanded="true" signature="2339:2438" ph="select from bug" />
+            <marker date="1477554725304" expanded="true" signature="2525:2578" ph="delete from " />
+            <marker date="1477554725304" expanded="true" signature="2670:2764" ph="delete from " />
+            <marker date="1477554725304" expanded="true" signature="2838:3050" ph="insert into bug... " />
+            <marker date="1477554725304" expanded="true" signature="4595:4791" ph="update bug i... " />
+            <marker date="1477554725304" expanded="true" signature="4877:5096" ph="update bug s... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="222" column="38" selection-start-line="222" selection-start-column="38" selection-end-line="222" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="322" column="13" selection-start-line="322" selection-start-column="13" selection-end-line="322" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1309,14 +1292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/TaskController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
           <folding />
         </state>
       </provider>

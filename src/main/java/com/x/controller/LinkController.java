@@ -177,6 +177,10 @@ public class LinkController {
         try{
             int id = Integer.parseInt(pro_id);
             int uid = Integer.parseInt(user_id);
+            if(userid==uid){
+                map.put("error","不能邀请自己");
+                return map;
+            }
             map.put("data",linkService.addLinkPro(new UserPro(id,uid), userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -201,6 +205,10 @@ public class LinkController {
         try{
             int id = Integer.parseInt(task_id);
             int uid = Integer.parseInt(user_id);
+            if(userid==uid){
+                map.put("error","不能邀请自己");
+                return map;
+            }
             map.put("data",linkService.addLinkTask(new UserTask(id,uid), userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -225,6 +233,10 @@ public class LinkController {
         try{
             int id = Integer.parseInt(bug_id);
             int uid = Integer.parseInt(user_id);
+            if(userid==uid){
+                map.put("error","不能邀请自己");
+                return map;
+            }
             map.put("data",linkService.addLinkBug(new UserBug(id,uid), userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -249,6 +261,10 @@ public class LinkController {
         try{
             int id = Integer.parseInt(pro_id);
             int uid = Integer.parseInt(user_id);
+            if(userid==uid){
+                map.put("error","不能删除自己");
+                return map;
+            }
             map.put("data",linkService.delLinkPro(new UserPro(id,uid), userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -273,6 +289,10 @@ public class LinkController {
         try{
             int id = Integer.parseInt(task_id);
             int uid = Integer.parseInt(user_id);
+            if(userid==uid){
+                map.put("error","不能删除自己");
+                return map;
+            }
             map.put("data",linkService.delLinkTask(new UserTask(id,uid),userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -297,6 +317,10 @@ public class LinkController {
         try{
             int id = Integer.parseInt(bug_id);
             int uid = Integer.parseInt(user_id);
+            if(userid==uid){
+                map.put("error","不能删除自己");
+                return map;
+            }
             map.put("data",linkService.delLinkBug(new UserBug(id,uid),userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
