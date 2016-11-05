@@ -115,7 +115,7 @@ public class LinkServiceImpl implements LinkService {
         boolean boo = false;
         Task task = this.taskMapper.selectByPrimaryKey(userTask.getTaskId());
         if(task.getUserId() == userid){
-            List<User> users = this.getAllUserForTask(userTask.getTaskId());
+            List<User> users = this.getAllUserForTask(task.getProId());
             for(User u : users){
                 if(u.getId().equals(userTask.getUserId())){
                     boo = true;
@@ -132,7 +132,7 @@ public class LinkServiceImpl implements LinkService {
         boolean boo = false;
         Bug bug = this.bugMapper.selectByPrimaryKey(userBug.getBugId());
         if(bug.getUserId() == userid){
-            List<User> users = this.getAllUserForBug(userBug.getBugId());
+            List<User> users = this.getAllUserForBug(bug.getTaskId());
             for(User u : users){
                 if(u.getId().equals(userBug.getUserId())){
                     boo = true;
