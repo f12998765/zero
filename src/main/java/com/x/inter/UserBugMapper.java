@@ -4,6 +4,6 @@ import com.x.model.UserBug;
 
 import java.util.List;
 
-public interface UserBugMapper extends BaseLinkMapper<UserBug>{
+public interface UserBugMapper extends BaseLinkMapper<UserBug,Integer>{
 
 }

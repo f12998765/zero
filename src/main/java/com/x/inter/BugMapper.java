@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface BugMapper extends BaseMapper<Bug>{
+public interface BugMapper extends BaseMapper<Bug,Integer>{
 
 
     //查询任务下的所有bug
-    List<Bug> selectByTaskId(int task_id);
+    List<Bug> selectByTaskId(Integer task_id);
 
     //查询任务下的所有bug-分页
     List<Bug> selectPageByTaskId(@Param(value = "startPos") Integer startPos, @Param(value = "pageSize") Integer pageSize, @Param(value = "task_id") int task_id);

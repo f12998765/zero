@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProjectMapper extends BaseMapper<Project>{
+public interface ProjectMapper extends BaseMapper<Project,Integer>{
 
 }

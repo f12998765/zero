@@ -7,10 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TaskMapper extends BaseMapper<Task>{
+public interface TaskMapper extends BaseMapper<Task,Integer>{
     
     //查询项目下的所有task
-    List<Task> selectByProId(int pro_id);
+    List<Task> selectByProId(Integer pro_id);
 
     //查询项目下的所有task-分页
     List<Task> selectPageByProId(@Param(value = "startPos") Integer startPos, @Param(value = "pageSize") Integer pageSize, @Param(value = "pro_id") int pro_id);
