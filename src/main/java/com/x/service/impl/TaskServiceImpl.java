@@ -50,14 +50,14 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public boolean delTask(int userid,int id) {
 
-        if(this.taskMapper.deleteByUserIdAndTaskId(userid,id) == 1) return true;
+        if(this.taskMapper.deleteByUserIdAndId(userid,id) == 1) return true;
         return false;
     }
 
     @Override
     public boolean updataTask(Task task) {
 
-        if(this.taskMapper.updateByUserIdAndTaskId(task) == 1) return true;
+        if(this.taskMapper.updateByUserIdAndId(task) == 1) return true;
         return false;
     }
 

@@ -58,7 +58,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <delete id="deleteByUserIdAndProId" parameterType="java.lang.Integer" >
+  <delete id="deleteByUserIdAndId" parameterType="java.lang.Integer" >
     delete from project
     where id = #{id,jdbcType=INTEGER} AND user_id = #{userId,jdbcType=INTEGER}
   </delete>
@@ -116,7 +116,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <update id="updateByUserIdAndProId" parameterType="com.x.model.Project" >
+  <update id="updateByUserIdAndId" parameterType="com.x.model.Project" >
     update project
     <set >
       <if test="info != null" >

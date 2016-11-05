@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06244dc1-37e2-4868-aaeb-90129b78eb1c" name="Default" comment="添加.gitignore">
+    <list default="true" id="06244dc1-37e2-4868-aaeb-90129b78eb1c" name="Default" comment="使用泛型Mapper">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/BaseLinkMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/BaseMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/filter/SimpleCORSFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/x/filter/SimpleCORSFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/BugMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/BugMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/ProjectMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/ProjectMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/inter/TaskMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/x/inter/TaskMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/BugServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/BugServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/LinkServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/LinkServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/ProjectServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/ProjectServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/service/impl/TaskServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/x/service/impl/TaskServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/filter/SimpleCORSFilter.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/filter/SimpleCORSFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/BugMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/BugMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/ProjectMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/ProjectMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/TaskMapper.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/inter/TaskMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/BugServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/BugServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/LinkServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/LinkServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/ProjectServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/ProjectServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/TaskServiceImpl.class" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/service/impl/TaskServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/inter/ProjectMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/ProjectMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/inter/UserBugMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/UserBugMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/inter/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/UserMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/inter/UserProMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/UserProMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/inter/UserTaskMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/inter/UserTaskMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/mapper/TaskMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/x/mapper/TaskMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/service/impl/BugServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/service/impl/BugServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/service/impl/ProjectServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/service/impl/ProjectServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/x/service/impl/TaskServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/x/service/impl/TaskServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/mapper/BugMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/x/mapper/BugMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/mapper/ProjectMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/x/mapper/ProjectMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/x/mapper/TaskMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/x/mapper/TaskMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/zeroDemo/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/mapper/BugMapper.xml" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/mapper/BugMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/mapper/ProjectMapper.xml" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/mapper/ProjectMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/mapper/TaskMapper.xml" afterPath="$PROJECT_DIR$/target/zeroDemo/WEB-INF/classes/com/x/mapper/TaskMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zero.iml" afterPath="$PROJECT_DIR$/zero.iml" />
     </list>
     <ignored path="zero.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,33 +73,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LinkController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
+      <file leaf-file-name="BaseMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/BaseMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5966">
-              <caret line="322" column="13" selection-start-line="322" selection-start-column="13" selection-end-line="322" selection-end-column="13" />
+            <state relative-caret-position="684">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="BugMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -70,6 +121,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -86,23 +138,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/model/Project.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/service/TaskService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/service/BugService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/service/ProjectService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/util/TokenUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/filter/SimpleCORSFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/service/LinkService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/TaskMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/ProjectMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/util/UserUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/ProjectServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestMyBatis.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/UserMapper.xml" />
@@ -110,15 +153,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/LinkServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/filter/TokenFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/ErrorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/BugServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/TaskServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/model/Task.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/model/Bug.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/TaskController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/BaseMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/mapper/TaskMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/ProjectMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/ProjectServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/BugServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/service/impl/TaskServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/filter/SimpleCORSFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/BaseLinkMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/UserBugMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/UserProMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/UserTaskMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -443,6 +500,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="filter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -454,7 +541,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -514,6 +601,31 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
@@ -634,6 +746,11 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -657,7 +774,7 @@
       <deployment>
         <artifact name="zero:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/zeroy" />
           </settings>
         </artifact>
       </deployment>
@@ -800,12 +917,14 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43600866" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4002169" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -815,6 +934,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -823,10 +943,7 @@
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45865834" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40093604" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -861,7 +978,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="为创建task和bug添加权限" />
     <MESSAGE value="删除请求时的用户参数，修改token生成参数" />
     <MESSAGE value="删除spring-mvc 过时配置，2.5基本完成" />
     <MESSAGE value="修改响应头" />
@@ -886,34 +1002,14 @@
     <MESSAGE value="修复task和bug修改错误" />
     <MESSAGE value="修改逻辑错误，不能在自己的实体中添加或删除自己" />
     <MESSAGE value="添加.gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加.gitignore" />
+    <MESSAGE value="创建新的分支" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建新的分支" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/util/TokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/LinkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -977,13 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/filter/SimpleCORSFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="82" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/UserProMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1026,38 +1115,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/ProjectMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/util/UserUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/UserBugMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/UserTaskMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1082,13 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="152" column="0" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/local/jdk/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/BugService.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1104,55 +1158,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/filter/TokenFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/ProjectServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/BugServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/TaskServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/UserTaskMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/TaskMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1588">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1168">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1181,30 +1190,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Bug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/TaskController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1221,25 +1206,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="222" column="38" selection-start-line="222" selection-start-column="38" selection-end-line="222" selection-end-column="38" />
+        <state relative-caret-position="450">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/LinkController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5966">
+        <state relative-caret-position="528">
           <caret line="322" column="13" selection-start-line="322" selection-start-column="13" selection-end-line="322" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -1247,18 +1224,213 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/BugController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="504">
+          <caret line="222" column="38" selection-start-line="222" selection-start-column="38" selection-end-line="222" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="561">
+          <caret line="156" column="40" selection-start-line="156" selection-start-column="40" selection-end-line="156" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/ProjectMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
+          <folding>
+            <marker date="1478324379951" expanded="true" signature="684:795" ph="select from project" />
+            <marker date="1478324379951" expanded="true" signature="1188:1209" ph="select * fro... project" />
+            <marker date="1478324379951" expanded="true" signature="1298:1396" ph="select from project" />
+            <marker date="1478324379951" expanded="true" signature="1488:1516" ph="SELECT COUNT... project" />
+            <marker date="1478324379951" expanded="true" signature="1631:1734" ph="select from project" />
+            <marker date="1478324379951" expanded="true" signature="1821:1878" ph="delete from " />
+            <marker date="1478324379951" expanded="true" signature="1967:2065" ph="delete from " />
+            <marker date="1478324379951" expanded="true" signature="2143:2322" ph="insert into project... " />
+            <marker date="1478324379951" expanded="true" signature="3647:3847" ph="update proje... " />
+            <marker date="1478324379951" expanded="true" signature="3937:4116" ph="update proje... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/TaskMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="148" column="31" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
+          <folding>
+            <marker date="1478324399686" expanded="true" signature="1059:1167" ph="select from task" />
+            <marker date="1478324399686" expanded="true" signature="1248:1266" ph="select * fro... task" />
+            <marker date="1478324399686" expanded="true" signature="1355:1450" ph="select from task" />
+            <marker date="1478324399686" expanded="true" signature="1543:1568" ph="SELECT COUNT... task" />
+            <marker date="1478324399686" expanded="true" signature="1698:1805" ph="select from task" />
+            <marker date="1478324399686" expanded="true" signature="1908:2045" ph="select from task" />
+            <marker date="1478324399686" expanded="true" signature="2150:2217" ph="SELECT COUNT... task" />
+            <marker date="1478324399686" expanded="true" signature="2332:2432" ph="select from task" />
+            <marker date="1478324399686" expanded="true" signature="2519:2573" ph="delete from " />
+            <marker date="1478324399686" expanded="true" signature="2662:2757" ph="delete from " />
+            <marker date="1478324399686" expanded="true" signature="2832:3043" ph="insert into task... " />
+            <marker date="1478324399686" expanded="true" signature="4583:4780" ph="update task " />
+            <marker date="1478324399686" expanded="true" signature="4867:5085" ph="update task " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/mapper/BugMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="144" column="44" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="44" />
+          <folding>
+            <marker date="1478324358799" expanded="true" signature="1060:1167" ph="select from bug" />
+            <marker date="1478324358799" expanded="true" signature="1252:1269" ph="select * fro... bug" />
+            <marker date="1478324358799" expanded="true" signature="1362:1386" ph="SELECT COUNT... bug" />
+            <marker date="1478324358799" expanded="true" signature="1475:1569" ph="select from bug" />
+            <marker date="1478324358799" expanded="true" signature="1699:1807" ph="select from bug" />
+            <marker date="1478324358799" expanded="true" signature="1911:2049" ph="select from bug" />
+            <marker date="1478324358799" expanded="true" signature="2156:2224" ph="SELECT COUNT... bug" />
+            <marker date="1478324358799" expanded="true" signature="2339:2438" ph="select from bug" />
+            <marker date="1478324358799" expanded="true" signature="2525:2578" ph="delete from " />
+            <marker date="1478324358799" expanded="true" signature="2667:2761" ph="delete from " />
+            <marker date="1478324358799" expanded="true" signature="2835:3047" ph="insert into bug... " />
+            <marker date="1478324358799" expanded="true" signature="4589:4785" ph="update bug i... " />
+            <marker date="1478324358799" expanded="true" signature="4871:5090" ph="update bug s... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/ProjectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/TaskServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/filter/SimpleCORSFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/filter/TokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="789">
+          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/BaseLinkMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/UserBugMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/UserProMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/ProjectMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/UserTaskMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/BaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/BugMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/model/Bug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/service/impl/BugServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/x/inter/TaskMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>

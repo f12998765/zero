@@ -40,7 +40,7 @@ public class ProjectServiceImpl implements ProjectService{
 
     @Override
     public boolean delProject(int userid,int id) {
-        if(this.projectMapper.deleteByUserIdAndProId(userid,id) == 1)
+        if(this.projectMapper.deleteByUserIdAndId(userid,id) == 1)
             return true;
 
         return false;
@@ -49,7 +49,7 @@ public class ProjectServiceImpl implements ProjectService{
 
     @Override
     public boolean updataProject(Project project) {
-        if( this.projectMapper.updateByUserIdAndProId(project) ==1)
+        if( this.projectMapper.updateByUserIdAndId(project) ==1)
             return true;
         return false;
     }

@@ -81,7 +81,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <delete id="deleteByUserIdAndBugId" parameterType="java.lang.Integer" >
+  <delete id="deleteByUserIdAndId" parameterType="java.lang.Integer" >
     delete from bug
     where id = #{id,jdbcType=INTEGER} AND user_id = #{userId,jdbcType=INTEGER}
   </delete>
@@ -148,7 +148,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <update id="updateByUserIdAndBugId" parameterType="com.x.model.Bug" >
+  <update id="updateByUserIdAndId" parameterType="com.x.model.Bug" >
     update bug
     <set >
       <if test="info != null" >

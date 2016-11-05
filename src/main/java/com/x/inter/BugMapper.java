@@ -7,31 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface BugMapper {
-    int deleteByPrimaryKey(Integer id);
+public interface BugMapper extends BaseMapper<Bug>{
 
-    int deleteByUserIdAndBugId(@Param("userId")Integer userid,@Param("id")Integer id);
-
-    int insert(Bug record);
-
-    int insertSelective(Bug record);
-
-    Bug selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(Bug record);
-
-    int updateByUserIdAndBugId(Bug record);
-
-    int updateByPrimaryKey(Bug record);
-
-    //查询所有
-    List<Bug> selectAll();
-
-    //查询所有-分页
-    List<Bug> selectPage(@Param(value = "startPos") Integer startPos, @Param(value = "pageSize") Integer pageSize);
-
-    //查询所有-获取总条数
-    int getCount();
 
     //查询任务下的所有bug
     List<Bug> selectByTaskId(int task_id);
@@ -41,10 +18,5 @@ public interface BugMapper {
 
     //查询任务下的所有bug-获取总条数
     int getCountByTaskId(@Param(value = "task_id") Integer task_id);
-
-
-    List<Bug> selectByUserId(int userid);
-
-    List<Bug> selectAllById(List<Integer> ids);
 
 }

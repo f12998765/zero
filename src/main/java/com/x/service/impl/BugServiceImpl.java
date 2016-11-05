@@ -50,14 +50,14 @@ public class BugServiceImpl implements BugService {
     @Override
     public boolean delBug(int userid,int id) {
 
-        if(this.bugMapper.deleteByUserIdAndBugId(userid,id) == 1) return true;
+        if(this.bugMapper.deleteByUserIdAndId(userid,id) == 1) return true;
         return false;
     }
 
     @Override
     public boolean updataBug(Bug bug) {
 
-        if(this.bugMapper.updateByUserIdAndBugId(bug) == 1) return true;
+        if(this.bugMapper.updateByUserIdAndId(bug) == 1) return true;
         return false;
     }
 

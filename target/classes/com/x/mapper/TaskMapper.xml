@@ -79,7 +79,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <delete id="deleteByUserIdAndTaskId" parameterType="java.lang.Integer" >
+  <delete id="deleteByUserIdAndId" parameterType="java.lang.Integer" >
     delete from task
     where id = #{id,jdbcType=INTEGER} AND user_id = #{userId,jdbcType=INTEGER}
   </delete>
@@ -146,7 +146,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <update id="updateByUserIdAndTaskId" parameterType="com.x.model.Task" >
+  <update id="updateByUserIdAndId" parameterType="com.x.model.Task" >
     update task
     <set >
       <if test="info != null" >
