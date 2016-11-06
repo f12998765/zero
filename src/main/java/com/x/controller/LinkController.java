@@ -1,7 +1,7 @@
 package com.x.controller;
 
 import com.x.model.*;
-import com.x.service.LinkService;
+import com.x.service.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +24,14 @@ public class LinkController {
     }
     @Resource
     private LinkService linkService;
+    @Resource
+    private ProjectService projectService;
+    @Resource
+    private TaskService taskService;
+    @Resource
+    private BugService bugService;
+    @Resource
+    private UserService userService;
 
     @ResponseBody
     @RequestMapping("/userbypro")
@@ -37,6 +45,10 @@ public class LinkController {
 
         try{
             int id= Integer.parseInt(pro_id);
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
             map.put("data",linkService.getUserByJoinPro(id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -60,6 +72,10 @@ public class LinkController {
 
         try{
             int id= Integer.parseInt(task_id);
+            if(taskService.getTaskById(id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
             map.put("data",linkService.getUserByJoinTask(id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -83,6 +99,10 @@ public class LinkController {
 
         try{
             int id= Integer.parseInt(bug_id);
+            if(bugService.getBugById(id)==null){
+                map.put("error","该Bug不存在");
+                return map;
+            }
             map.put("data",linkService.getUserByJoinBug(id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -106,6 +126,10 @@ public class LinkController {
 
         try{
             int id= Integer.parseInt(user_id);
+            if(userService.getUserById(id)==null){
+                map.put("error","该用户不存在");
+                return map;
+            }
             map.put("data",linkService.getProByJoinUser(id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -129,6 +153,10 @@ public class LinkController {
 
         try{
             int id= Integer.parseInt(user_id);
+            if(userService.getUserById(id)==null){
+                map.put("error","该用户不存在");
+                return map;
+            }
             map.put("data",linkService.getTaskByJoinUser(id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -152,6 +180,10 @@ public class LinkController {
 
         try{
             int id= Integer.parseInt(user_id);
+            if(userService.getUserById(id)==null){
+                map.put("error","该用户不存在");
+                return map;
+            }
             map.put("data",linkService.getBugByJoinUser(id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -179,6 +211,14 @@ public class LinkController {
             int uid = Integer.parseInt(user_id);
             if(userid==uid){
                 map.put("error","不能邀请自己");
+                return map;
+            }
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
+            if(userService.getUserById(uid)==null){
+                map.put("error","该用户不存在");
                 return map;
             }
             map.put("data",linkService.addLinkPro(new UserPro(id,uid), userid));
@@ -209,6 +249,14 @@ public class LinkController {
                 map.put("error","不能邀请自己");
                 return map;
             }
+            if(taskService.getTaskById(id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
+            if(userService.getUserById(uid)==null){
+                map.put("error","该用户不存在");
+                return map;
+            }
             map.put("data",linkService.addLinkTask(new UserTask(id,uid), userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -235,6 +283,14 @@ public class LinkController {
             int uid = Integer.parseInt(user_id);
             if(userid==uid){
                 map.put("error","不能邀请自己");
+                return map;
+            }
+            if(bugService.getBugById(id)==null){
+                map.put("error","该Bug不存在");
+                return map;
+            }
+            if(userService.getUserById(uid)==null){
+                map.put("error","该用户不存在");
                 return map;
             }
             map.put("data",linkService.addLinkBug(new UserBug(id,uid), userid));
@@ -265,6 +321,14 @@ public class LinkController {
                 map.put("error","不能删除自己");
                 return map;
             }
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
+            if(userService.getUserById(uid)==null){
+                map.put("error","该用户不存在");
+                return map;
+            }
             map.put("data",linkService.delLinkPro(new UserPro(id,uid), userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -293,6 +357,14 @@ public class LinkController {
                 map.put("error","不能删除自己");
                 return map;
             }
+            if(taskService.getTaskById(id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
+            if(userService.getUserById(uid)==null){
+                map.put("error","该用户不存在");
+                return map;
+            }
             map.put("data",linkService.delLinkTask(new UserTask(id,uid),userid));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -319,6 +391,14 @@ public class LinkController {
             int uid = Integer.parseInt(user_id);
             if(userid==uid){
                 map.put("error","不能删除自己");
+                return map;
+            }
+            if(bugService.getBugById(id)==null){
+                map.put("error","该Bug不存在");
+                return map;
+            }
+            if(userService.getUserById(uid)==null){
+                map.put("error","该用户不存在");
                 return map;
             }
             map.put("data",linkService.delLinkBug(new UserBug(id,uid),userid));

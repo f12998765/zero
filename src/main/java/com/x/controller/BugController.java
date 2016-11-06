@@ -2,6 +2,7 @@ package com.x.controller;
 
 import com.x.model.Bug;
 import com.x.service.BugService;
+import com.x.service.TaskService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,8 @@ import java.util.Map;
 public class BugController {
     @Resource
     private BugService bugService;
+    @Resource
+    private TaskService taskService;
 
     @ModelAttribute("userid")
     public int getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
@@ -104,6 +107,10 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(task_id);
+            if(taskService.getTaskById(id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
             List<Bug> bugs = bugService.getBugByTaskId(id);
             map.put("data",bugs);
         }catch (NumberFormatException no){
@@ -127,6 +134,10 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(task_id);
+            if(taskService.getTaskById(id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
             List<Bug> bugs =  bugService.getPageByTaskId(pageNow,id,pageSize);
@@ -152,6 +163,10 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(task_id);
+            if(taskService.getTaskById(id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
             int sum=bugService.getCountByTaskId(id);
             map.put("data",sum);
         }catch (NumberFormatException no){
@@ -175,6 +190,10 @@ public class BugController {
 
         try{
             int task_id= Integer.parseInt(xid);
+            if(taskService.getTaskById(task_id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
             Bug b = new Bug(userid,task_id,info, Date.from(Instant.now()));
             map.put("data",bugService.addBug(b));
         }catch (NumberFormatException no){
@@ -198,6 +217,10 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(bug_id);
+            if(bugService.getBugById(id)==null){
+                map.put("error","该Bug不存在");
+                return map;
+            }
             map.put("data",bugService.delBug(userid,id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -220,6 +243,10 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(bug_id);
+            if(bugService.getBugById(id)==null){
+                map.put("error","该Bug不存在");
+                return map;
+            }
             Bug t = new Bug(id,userid,info);
             map.put("data",bugService.updataBug(t));
         }catch (NumberFormatException no){

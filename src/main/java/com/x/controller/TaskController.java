@@ -1,6 +1,7 @@
 package com.x.controller;
 
 import com.x.model.Task;
+import com.x.service.ProjectService;
 import com.x.service.TaskService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,8 @@ import java.util.Map;
 public class TaskController {
     @Resource
     private TaskService taskService;
+    @Resource
+    private ProjectService projectService;
 
     @ModelAttribute("userid")
     public int getUser(@Value(value = "#{request.getAttribute('userid')}") String userid)
@@ -105,6 +108,10 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(pro_id);
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
             List<Task> tasks = taskService.getTaskByProId(id);
             map.put("data",tasks);
         }catch (NumberFormatException no){
@@ -128,6 +135,10 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(pro_id);
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
             List<Task> tasks = taskService.getPageByProId(pageNow,id,pageSize);
@@ -153,6 +164,10 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(pro_id);
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
             int sum=taskService.getCountByProId(id);
             map.put("data",sum);
         }catch (NumberFormatException no){
@@ -177,6 +192,10 @@ public class TaskController {
 
         try{
             int pro_id= Integer.parseInt(xid);
+            if(projectService.getProjectById(pro_id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
             Task t = new Task(userid,pro_id,info, Date.from(Instant.now()));
 
             map.put("data",taskService.addTask(t));
@@ -201,6 +220,10 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(task_id);
+            if(taskService.getTaskById(id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
             map.put("data",taskService.delTask(userid,id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -223,6 +246,10 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(task_id);
+            if(taskService.getTaskById(id)==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
             Task t = new Task(id,userid,info);
             map.put("data",taskService.updataTask(t));
         }catch (NumberFormatException no){

@@ -111,6 +111,10 @@ public class ProjectController {
         }
         try{
             int id= Integer.parseInt(pro_id);
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
             boolean boo = projectService.delProject(userid,id);
             map.put("data",boo);
         }catch (NumberFormatException no){
@@ -134,6 +138,10 @@ public class ProjectController {
 
         try{
             int id= Integer.parseInt(pro_id);
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
             Project p = new Project(id, userid,info);
             boolean boo = projectService.updataProject(p);
             map.put("data",boo);
