@@ -179,7 +179,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>zeroDemo</finalName>
+    <finalName>zero</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
