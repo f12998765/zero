@@ -154,7 +154,7 @@ public class LinkServiceImpl implements LinkService {
     public List<User> getAllUserForTask(int id) {
         Project p = this.projectMapper.selectByPrimaryKey(id);
         User u = this.userMapper.selectByPrimaryKey(p.getUserId());
-
+        u.setPassword(null);
         List<User> users = new ArrayList<>();
         users.add(u);
 
