@@ -15,7 +15,7 @@
   </select>
 
   <insert id="insert" parameterType="com.x.model.UserPro" >
-    insert into user_pro (pro_id, user_id)
+    insert IGNORE into user_pro (pro_id, user_id)
     values (#{proId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
   </insert>
 

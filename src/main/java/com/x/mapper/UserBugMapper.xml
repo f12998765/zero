@@ -21,7 +21,7 @@
 
 
   <insert id="insert" parameterType="com.x.model.UserBug" >
-    insert into user_bug (bug_id, user_id)
+    insert IGNORE into user_bug (bug_id, user_id)
     values (#{bugId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.x.model.UserBug" >

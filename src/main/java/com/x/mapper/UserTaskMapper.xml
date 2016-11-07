@@ -20,7 +20,7 @@
   </delete>
 
   <insert id="insert" parameterType="com.x.model.UserTask" >
-    insert into user_task (task_id, user_id)
+    insert IGNORE into user_task (task_id, user_id)
     values (#{taskId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.x.model.UserTask" >
