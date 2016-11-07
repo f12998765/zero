@@ -34,7 +34,7 @@ public class LinkController {
     private UserService userService;
 
     @ResponseBody
-    @RequestMapping("/userbypro")
+    @RequestMapping("/user/pro")
     public Map getUserByProId(@RequestParam("id") String pro_id){
         Map map = new HashMap();
 
@@ -61,7 +61,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/userbytask")
+    @RequestMapping("/user/task")
     public Map getUserByTaskId(@RequestParam("id") String task_id){
         Map map = new HashMap();
 
@@ -88,7 +88,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/userbybug")
+    @RequestMapping("/user/bug")
     public Map getUserByBugId(@RequestParam("id") String bug_id){
         Map map = new HashMap();
 
@@ -115,7 +115,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/probyuser")
+    @RequestMapping("/pro/user")
     public Map getProByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
 
@@ -142,7 +142,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/taskbyuser")
+    @RequestMapping("/task/user")
     public Map getTaskByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
 
@@ -169,7 +169,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/bugbyuser")
+    @RequestMapping("/bug/user")
     public Map getBugByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
 
@@ -411,4 +411,88 @@ public class LinkController {
         return map;
 
     }
+
+    @ResponseBody
+    @RequestMapping("/all/pro")
+    public Map getAllByProId(@RequestParam("id") String pro_id){
+        Map map = new HashMap();
+
+        if(pro_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
+        try{
+            int id= Integer.parseInt(pro_id);
+            if(projectService.getProjectById(id)==null){
+                map.put("error","该项目不存在");
+                return map;
+            }
+            map.put("data",linkService.getAllUserForTask(id));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
+
+    }
+
+    @ResponseBody
+    @RequestMapping("/all/task")
+    public Map getAllByTaskId(@RequestParam("id") String task_id){
+        Map map = new HashMap();
+
+        if(task_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
+        try{
+            int id= Integer.parseInt(task_id);
+            Task task=taskService.getTaskById(id);
+            if(task==null){
+                map.put("error","该任务不存在");
+                return map;
+            }
+            map.put("data",linkService.getAllUserForTask(task.getProId()));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
+
+    }
+
+    @ResponseBody
+    @RequestMapping("/all/bug")
+    public Map getAllByBugId(@RequestParam("id") String bug_id){
+        Map map = new HashMap();
+
+        if(bug_id==""){
+            map.put("error","参数为空");
+            return map;
+        }
+
+        try{
+            int id= Integer.parseInt(bug_id);
+            Bug bug=bugService.getBugById(id);
+            if(bug==null){
+                map.put("error","该Bug不存在");
+                return map;
+            }
+            map.put("data",linkService.getAllUserForBug(bug.getTaskId()));
+        }catch (NumberFormatException no){
+            map.put("error","请求参数类型错误");
+        }catch (Exception e){
+            map.put("error","服务器异常");
+            e.printStackTrace();
+        }
+        return map;
+
+    }
+
 }
