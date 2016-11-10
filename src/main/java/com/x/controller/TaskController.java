@@ -40,7 +40,7 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(task_id);
-            Task t = taskService.getTaskById(id);
+            Task t = taskService.getById(id);
             map.put("data",t);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -55,7 +55,7 @@ public class TaskController {
     @RequestMapping("/getall")
     public Map getAll(){
         Map map = new HashMap();
-        map.put("data",taskService.getAllTask());
+        map.put("data",taskService.getAll());
         return map;
     }
 
@@ -72,7 +72,7 @@ public class TaskController {
         try{
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
-            List<Task> tasks = taskService.getPage(pageNow,pageSize);
+            List<Task> tasks = taskService.getAllPage(pageNow,pageSize);
             map.put("data",tasks);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -87,7 +87,7 @@ public class TaskController {
     @RequestMapping("/getall/sum")
     public Map getAllCount(){
         Map map = new HashMap();
-        map.put("data",taskService.getCount());
+        map.put("data",taskService.getAllCount());
         return map;
     }
 
@@ -105,7 +105,7 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(pro_id);
-            List<Task> tasks = taskService.getTaskByProId(id);
+            List<Task> tasks = taskService.getByUpId(id);
             map.put("data",tasks);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -130,7 +130,7 @@ public class TaskController {
             int id= Integer.parseInt(pro_id);
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
-            List<Task> tasks = taskService.getPageByProId(pageNow,id,pageSize);
+            List<Task> tasks = taskService.getByUpIdPage(pageNow,id,pageSize);
             map.put("data",tasks);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -153,7 +153,7 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(pro_id);
-            int sum=taskService.getCountByProId(id);
+            int sum=taskService.getByUpIdCount(id);
             map.put("data",sum);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -179,7 +179,7 @@ public class TaskController {
             int pro_id= Integer.parseInt(xid);
             Task t = new Task(userid,pro_id,info, Date.from(Instant.now()));
 
-            map.put("data",taskService.addTask(t));
+            map.put("data",taskService.add(t));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
         }catch (Exception e){
@@ -201,7 +201,7 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(task_id);
-            map.put("data",taskService.delTask(userid,id));
+            map.put("data",taskService.delete(userid,id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
         }catch (Exception e){
@@ -224,7 +224,7 @@ public class TaskController {
         try{
             int id= Integer.parseInt(task_id);
             Task t = new Task(id,userid,info);
-            map.put("data",taskService.updataTask(t));
+            map.put("data",taskService.updata(t));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
         }catch (Exception e){
@@ -246,7 +246,7 @@ public class TaskController {
 
         try{
             int id= Integer.parseInt(user_id);
-            List<Task> tasks = taskService.getTaskByUserId(id);
+            List<Task> tasks = taskService.getByUserId(id);
             map.put("data",tasks);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");

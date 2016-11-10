@@ -40,7 +40,7 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(bug_id);
-            Bug b = bugService.getBugById(id);
+            Bug b = bugService.getById(id);
             map.put("data",b);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -55,7 +55,7 @@ public class BugController {
     @RequestMapping("/getall")
     public Map getAll(){
         Map map = new HashMap();
-        map.put("data",bugService.getAllBug());
+        map.put("data",bugService.getAll());
         return map;
     }
 
@@ -72,7 +72,7 @@ public class BugController {
         try{
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
-            List<Bug> bugs = bugService.getPage(pageNow,pageSize);
+            List<Bug> bugs = bugService.getAllPage(pageNow,pageSize);
             map.put("data",bugs);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -87,7 +87,7 @@ public class BugController {
     @RequestMapping("/getall/sum")
     public Map getAllCount(){
         Map map = new HashMap();
-        map.put("data",bugService.getCount());
+        map.put("data",bugService.getAllCount());
         return map;
     }
 
@@ -104,7 +104,7 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(task_id);
-            List<Bug> bugs = bugService.getBugByTaskId(id);
+            List<Bug> bugs = bugService.getByUpId(id);
             map.put("data",bugs);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -129,7 +129,7 @@ public class BugController {
             int id= Integer.parseInt(task_id);
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
-            List<Bug> bugs =  bugService.getPageByTaskId(pageNow,id,pageSize);
+            List<Bug> bugs =  bugService.getByUpIdPage(pageNow,id,pageSize);
             map.put("data",bugs);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -152,7 +152,7 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(task_id);
-            int sum=bugService.getCountByTaskId(id);
+            int sum=bugService.getByUpIdCount(id);
             map.put("data",sum);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -176,7 +176,7 @@ public class BugController {
         try{
             int task_id= Integer.parseInt(xid);
             Bug b = new Bug(userid,task_id,info, Date.from(Instant.now()));
-            map.put("data",bugService.addBug(b));
+            map.put("data",bugService.add(b));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
         }catch (Exception e){
@@ -198,7 +198,7 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(bug_id);
-            map.put("data",bugService.delBug(userid,id));
+            map.put("data",bugService.delete(userid,id));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
         }catch (Exception e){
@@ -221,7 +221,7 @@ public class BugController {
         try{
             int id= Integer.parseInt(bug_id);
             Bug t = new Bug(id,userid,info);
-            map.put("data",bugService.updataBug(t));
+            map.put("data",bugService.updata(t));
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
         }catch (Exception e){
@@ -243,7 +243,7 @@ public class BugController {
 
         try{
             int id= Integer.parseInt(user_id);
-            List<Bug> bugs = bugService.getBugByUserId(id);
+            List<Bug> bugs = bugService.getByUserId(id);
             map.put("data",bugs);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");

@@ -39,7 +39,7 @@ public class ProjectController {
 
         try{
             int id= Integer.parseInt(pro_id);
-            Project p = projectService.getProjectById(id);
+            Project p = projectService.getById(id);
             map.put("data",p);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -54,7 +54,7 @@ public class ProjectController {
     @RequestMapping("/getall")
     public Map getAll(){
         Map map = new HashMap();
-        map.put("data",projectService.getAllProject());
+        map.put("data",projectService.getAll());
         return map;
     }
 
@@ -69,7 +69,7 @@ public class ProjectController {
         try{
             int pageNow=Integer.parseInt(pageNow_);
             int pageSize=Integer.parseInt(pageSize_);
-            List<Project> projects = projectService.getPage(pageNow,pageSize);
+            List<Project> projects = projectService.getAllPage(pageNow,pageSize);
             map.put("data",projects);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -84,7 +84,7 @@ public class ProjectController {
     @RequestMapping("/getall/sum")
     public Map getAllCount(){
         Map map = new HashMap();
-        map.put("data",projectService.getCount());
+        map.put("data",projectService.getAll());
         return map;
     }
 
@@ -97,7 +97,7 @@ public class ProjectController {
             return map;
         }
         Project p = new Project(userid,info, Date.from(Instant.now()));
-        map.put("data",projectService.addProject(p));
+        map.put("data",projectService.add(p));
         return map;
     }
 
@@ -111,7 +111,7 @@ public class ProjectController {
         }
         try{
             int id= Integer.parseInt(pro_id);
-            boolean boo = projectService.delProject(userid,id);
+            boolean boo = projectService.delete(userid,id);
             map.put("data",boo);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -135,7 +135,7 @@ public class ProjectController {
         try{
             int id= Integer.parseInt(pro_id);
             Project p = new Project(id, userid,info);
-            boolean boo = projectService.updataProject(p);
+            boolean boo = projectService.updata(p);
             map.put("data",boo);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
@@ -157,7 +157,7 @@ public class ProjectController {
 
         try{
             int id= Integer.parseInt(user_id);
-            List<Project> projects = projectService.getProByUserId(id);
+            List<Project> projects = projectService.getByUserId(id);
             map.put("data",projects);
         }catch (NumberFormatException no){
             map.put("error","请求参数类型错误");
