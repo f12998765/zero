@@ -4,6 +4,7 @@ import com.x.inter.BaseMapper;
 import com.x.inter.BaseUpMapper;
 import com.x.service.BaseUpService;
 import com.x.util.Page;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class BaseUpServiceImpl<T> extends BaseServiceImpl<T> implements BaseUpService<T> {
 
-    @Resource
+    @Autowired
     private BaseUpMapper<T> baseUpMapper;
 
     @Override

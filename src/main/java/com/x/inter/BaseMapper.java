@@ -35,7 +35,7 @@ public interface BaseMapper<T> {
     int getCount();
 
 
-    List<T> selectByUserId(Integer userid);
+    List<T> selectByBuildUserId(Integer userId);
 
     List<T> selectAllById(List<Integer> ids);
 }

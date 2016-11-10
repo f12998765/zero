@@ -12,10 +12,10 @@ public interface BaseLinkMapper<T> {
     int insertSelective(T t);
 
     /*获取参与的用户id*/
-    List<Integer> selectUserId(Integer id);
+    List<Integer> selectLinkUserId(Integer id);
 
     /*获取某用户参与所有di*/
-    List<Integer> selectByUserId(Integer id);
+    List<Integer> selectLinkByUserId(Integer id);
 
     int delete(T t);
 }

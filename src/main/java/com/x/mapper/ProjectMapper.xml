@@ -12,7 +12,7 @@
   </sql>
 
   <!-- 查询某个用户创建的pro-->
-  <select id="selectByUserId" resultMap="BaseResultMap">
+  <select id="selectByBuildUserId" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from project

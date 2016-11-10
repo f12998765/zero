@@ -3,6 +3,7 @@ package com.x.service.impl;
 import com.x.inter.BaseMapper;
 import com.x.service.BaseService;
 import com.x.util.Page;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class BaseServiceImpl<T> implements BaseService<T> {
 
-    @Resource
+    @Autowired
     private BaseMapper<T> baseMapper;
 
     @Override
@@ -69,6 +70,6 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 
     @Override
     public List getByUserId(Integer id) {
-        return this.baseMapper.selectByUserId(id);
+        return this.baseMapper.selectByBuildUserId(id);
     }
 }
