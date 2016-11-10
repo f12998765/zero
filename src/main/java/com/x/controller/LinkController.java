@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by xi on 16-10-26.
+ * Created / xi on 16-10-26.
  */
 @RestController
 @RequestMapping("/link")
@@ -26,7 +26,7 @@ public class LinkController {
     private LinkService linkService;
 
     @ResponseBody
-    @RequestMapping("/userbypro")
+    @RequestMapping("/user/pro")
     public Map getUserByProId(@RequestParam("id") String pro_id){
         Map map = new HashMap();
 
@@ -49,7 +49,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/userbytask")
+    @RequestMapping("/user/task")
     public Map getUserByTaskId(@RequestParam("id") String task_id){
         Map map = new HashMap();
 
@@ -72,7 +72,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/userbybug")
+    @RequestMapping("/user/bug")
     public Map getUserByBugId(@RequestParam("id") String bug_id){
         Map map = new HashMap();
 
@@ -95,7 +95,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/probyuser")
+    @RequestMapping("/pro/user")
     public Map getProByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
 
@@ -118,7 +118,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/taskbyuser")
+    @RequestMapping("/task/user")
     public Map getTaskByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
 
@@ -141,7 +141,7 @@ public class LinkController {
     }
 
     @ResponseBody
-    @RequestMapping("/bugbyuser")
+    @RequestMapping("/bug/user")
     public Map getBugByUserId(@RequestParam("id") String user_id){
         Map map = new HashMap();
 

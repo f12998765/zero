@@ -6,11 +6,11 @@
     <result column="user_id" property="userId" jdbcType="INTEGER" />
   </resultMap>
 
-  <select id="selectUserIdByTaskId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+  <select id="selectUserId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
     select user_id from user_task where task_id=#{taskId,jdbcType=INTEGER}
   </select>
 
-  <select id="selectTaskIdByUserId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
     select task_id from user_task where user_id=#{userId,jdbcType=INTEGER}
   </select>
 
