@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TaskMapper extends BaseMapper<Task,Integer>{
+public interface TaskMapper extends BaseMapper<Task>{
     
     //查询项目下的所有task
     List<Task> selectByProId(Integer pro_id);

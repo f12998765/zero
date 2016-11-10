@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface BugMapper extends BaseMapper<Bug,Integer>{
+public interface BugMapper extends BaseMapper<Bug>{
 
 
     //查询任务下的所有bug

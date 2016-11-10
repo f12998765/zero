@@ -8,28 +8,28 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/5.
  */
-public interface BaseService<T,ID extends Serializable> {
+public interface BaseService<T> {
 
-    public T getById(ID id);
+    public T getById(Integer id);
 
     public List<T> getAll();
 
     public boolean add(T t);
 
-    public boolean delete(ID userid,ID id);
+    public boolean delete(Integer userid,Integer id);
 
     public boolean updata(T t);
 
-    public List<T> getByUpId(ID up_id);
+    public List<T> getByUpId(Integer up_id);
 
-    public List<T> getByUpIdPage(ID pageNow,ID up_id,ID pageSize);
+    public List<T> getByUpIdPage(Integer pageNow,Integer up_id,Integer pageSize);
 
-    public List<T> getAllPage(ID pageNow,ID pageSize);
+    public List<T> getAllPage(Integer pageNow,Integer pageSize);
 
-    public ID getAllCount();
+    public Integer getAllCount();
 
-    public ID getByUpIdCount(ID up_id);
+    public Integer getByUpIdCount(Integer up_id);
 
-    public List<T> getByUserId(ID id);
+    public List<T> getByUserId(Integer id);
 
 }

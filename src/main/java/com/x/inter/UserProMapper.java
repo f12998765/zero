@@ -5,6 +5,6 @@ import com.x.model.UserPro;
 
 import java.util.List;
 
-public interface UserProMapper extends BaseLinkMapper<UserPro,Integer> {
+public interface UserProMapper extends BaseLinkMapper<UserPro> {
 
 }

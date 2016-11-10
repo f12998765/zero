@@ -5,6 +5,6 @@ import com.x.model.UserTask;
 
 import java.util.List;
 
-public interface UserTaskMapper extends BaseLinkMapper<UserPro,Integer> {
+public interface UserTaskMapper extends BaseLinkMapper<UserTask> {
 
 }

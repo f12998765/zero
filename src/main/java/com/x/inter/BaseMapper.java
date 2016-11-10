@@ -8,16 +8,16 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/5.
  */
-public interface BaseMapper<T,ID extends Serializable> {
-    int deleteByPrimaryKey(ID id);
+public interface BaseMapper<T> {
+    int deleteByPrimaryKey(Integer id);
 
-    int deleteByUserIdAndId(@Param("userId")ID userid, @Param("id")ID id);
+    int deleteByUserIdAndId(@Param("userId")Integer userid, @Param("id")Integer id);
 
     int insert(T t);
 
     int insertSelective(T t);
 
-    T selectByPrimaryKey(ID id);
+    T selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(T t);
 
@@ -29,13 +29,13 @@ public interface BaseMapper<T,ID extends Serializable> {
     List<T> selectAll();
 
     //查询所有-分页
-    List<T> selectPage(@Param(value = "startPos") ID startPos, @Param(value = "pageSize") ID pageSize);
+    List<T> selectPage(@Param(value = "startPos") Integer startPos, @Param(value = "pageSize") Integer pageSize);
 
     //查询所有-获取总条数
     int getCount();
 
 
-    List<T> selectByUserId(ID userid);
+    List<T> selectByUserId(Integer userid);
 
-    List<T> selectAllById(List<ID> ids);
+    List<T> selectAllById(List<Integer> ids);
 }
