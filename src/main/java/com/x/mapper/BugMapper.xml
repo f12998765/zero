@@ -51,22 +51,22 @@
   </select>
 
   <!--查询任务下的所有bug-->
-  <select id="selectByTaskId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+  <select id="selectByUpId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
     select
     <include refid="Base_Column_List" />
     from bug
-    WHERE task_id = #{task_id,jdbcType=INTEGER}
+    WHERE task_id = #{up_id,jdbcType=INTEGER}
   </select>
   <!-- 查询任务下的所有bug-分页 -->
-  <select id="selectPageByTaskId" resultMap="BaseResultMap">
+  <select id="selectPageByUpId" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from bug
-    WHERE task_id = #{task_id,jdbcType=INTEGER} limit #{startPos},#{pageSize}
+    WHERE task_id = #{up_id,jdbcType=INTEGER} limit #{startPos},#{pageSize}
   </select>
   <!-- 查询任务下的所有bug-总数 -->
-  <select id="getCountByTaskId" resultType="java.lang.Integer">
-    SELECT COUNT(*) FROM bug WHERE task_id = #{task_id,jdbcType=INTEGER}
+  <select id="selectCountByUpId" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM bug WHERE task_id = #{up_id,jdbcType=INTEGER}
   </select>
 
 

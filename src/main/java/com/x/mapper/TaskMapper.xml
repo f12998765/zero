@@ -48,23 +48,23 @@
   </select>
 
   <!--查询项目下的所有task-->
-  <select id="selectByProId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+  <select id="selectByUpId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
     select
     <include refid="Base_Column_List" />
     from task
-    WHERE pro_id = #{pro_id,jdbcType=INTEGER}
+    WHERE pro_id = #{up_id,jdbcType=INTEGER}
   </select>
 
   <!--查询项目下的所有task-分页-->
-  <select id="selectPageByProId" resultMap="BaseResultMap">
+  <select id="selectPageByUpId" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from task
-    WHERE pro_id = #{pro_id,jdbcType=INTEGER} limit #{startPos},#{pageSize}
+    WHERE pro_id = #{up_id,jdbcType=INTEGER} limit #{startPos},#{pageSize}
   </select>
   <!--查询项目下的所有task-总数-->
-  <select id="getCountByProId" resultType="java.lang.Integer">
-    SELECT COUNT(*) FROM task WHERE pro_id = #{pro_id,jdbcType=INTEGER}
+  <select id="selectCountByUpId" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM task WHERE pro_id = #{up_id,jdbcType=INTEGER}
   </select>
 
 
